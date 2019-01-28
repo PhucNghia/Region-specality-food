@@ -17,6 +17,7 @@ gem "devise", "~> 4.1"
 gem "bootstrap-sass", "3.3.7"
 gem "jquery-rails"
 gem "jquery-turbolinks"
+gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
