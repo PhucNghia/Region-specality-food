@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   attr_writer :login
 
+  validates :name, presence: true
+  validates :email, presence: true
+  # validates :email, uniqueness: true
+
   def login
     @login || self.username || self.email
   end
