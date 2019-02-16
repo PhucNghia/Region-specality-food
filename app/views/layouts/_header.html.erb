@@ -5,6 +5,26 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "javascript:void(0)", class: "dropdown-toggle languages", "data-toggle": "dropdown" do %>
+            <%= image_tag img_language(session[:language]) %>
+          <i class="fa fa-angle-down"></i>
+          <% end %>
+          <ul class="dropdown-menu dropdown-menu-right languages" role="menu">
+            <li data-lang= "en">
+              <%= link_to "javascript:void(0)" do %>
+                <%= image_tag "english.png" %>
+                <span>English</span>
+              <% end %>
+            </li>
+            <li data-lang= "vi">
+              <%= link_to "javascript:void(0)" do %>
+                <%= image_tag "vietnamese" %>
+                <span>Tiếng việt</span>
+              <% end %>
+            </li>
+          </ul>
+        </li>
         <li><a href="#">Link</a></li>
         <% if user_signed_in? %>
           <li class="dropdown">
@@ -16,7 +36,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to (t ".login"), new_user_session_path %></li>
         <% end %>
       </ul>
     </div>
