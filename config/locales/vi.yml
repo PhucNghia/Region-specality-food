@@ -2,3 +2,7 @@ vi:
   layouts:
     header:
       login: "Đăng nhập"
+  admin:
+    layouts:
+      header:
+        login: "Đăng nhập"
