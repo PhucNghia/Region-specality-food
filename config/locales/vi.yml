@@ -2,7 +2,9 @@ vi:
   layouts:
     header:
       login: "Đăng nhập"
+      logout: "Đăng xuất"
   admin:
     layouts:
       header:
         login: "Đăng nhập"
+        logout: "Đăng xuất"

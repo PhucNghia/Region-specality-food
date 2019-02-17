@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Home", root_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "javascript:void(0)", class: "dropdown-toggle languages", "data-toggle": "dropdown" do %>
+            <%= image_tag img_language(session[:language]) %>
+          <i class="fa fa-angle-down"></i>
+          <% end %>
+          <ul class="dropdown-menu dropdown-menu-right languages" role="menu">
+            <li data-lang= "en">
+              <%= link_to "javascript:void(0)" do %>
+                <%= image_tag "english.png" %>
+                <span>English</span>
+              <% end %>
+            </li>
+            <li data-lang= "vi">
+              <%= link_to "javascript:void(0)" do %>
+                <%= image_tag "vietnamese.png" %>
+                <span>Tiếng việt</span>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Link</a></li>
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><%= link_to "profile", edit_user_registration_path %></a></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to (t ".login"), new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
