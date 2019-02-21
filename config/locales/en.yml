@@ -2,7 +2,9 @@ en:
   layouts:
     header:
       login: "Login"
+      logout: "Logout"
   admin:
     layouts:
       header:
         login: "Login"
+        logout: "Logout"

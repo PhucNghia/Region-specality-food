@@ -255,10 +255,10 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   devise (~> 4.1)
-  font-awesome-rails
-  font-awesome-sass
   factory_bot_rails
   faker
+  font-awesome-rails
+  font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

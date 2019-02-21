@@ -1,0 +1,32 @@
+// Header
+.low-menu li {
+  position: relative;
+  width: 100px;
+}
+
+.sub-menu ul {
+  position: absolute;
+  display: none !important;
+  padding-left: 17px !important;
+}
+
+.sub-menu ul li {
+  height: 40px;
+  float: left;
+  border-top: 0.5px solid #BDBDBD;
+  background: #FAFAFA;
+  line-height: 40px;
+  width: 117px;
+}
+
+.languages ul li a {
+  margin-left: -20px !important;
+}
+
+.sub-menu ul li a {
+  line-height: 40px !important;
+}
+
+.low-menu .sub-menu:hover ul {
+  display:block !important;
+}
