@@ -37,9 +37,6 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "rails_log_stdout",           github: "heroku/rails_log_stdout"
-  gem "rails3_serve_static_assets", github: "heroku/rails3_serve_static_assets"
-  gem "rails_12factor"
 end
 
 group :test do
