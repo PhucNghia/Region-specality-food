@@ -41,3 +41,9 @@ development:
 test:
   <<: *default
   database: rsf_test
+
+production:
+  adapter: postgresql
+  database: dacsan3mien
+  pool: 5
+  timeout: 5000
