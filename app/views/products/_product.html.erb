@@ -1,0 +1,33 @@
+<div class="masonry-item noo-product-column col-md-4 col-sm-6 product">
+  <div class="noo-product-inner">
+    <div class="noo-product-thumbnail">
+      <%= link_to product_path(product.id) do %>
+        <%= image_tag product.image, style: "width: 600; height: 760;" %>
+      <% end %>
+      <div class="noo-rating">
+        <div class="star-rating">
+          <span style="width:0%"></span>
+        </div>
+      </div>
+    </div>
+    <div class="noo-product-title">
+      <h3><%= link_to product.name, product_path(product.id) %></h3>
+      <span class="price"><span class="amount"><%= product.price%> vnđ</span></span>
+      <div class="noo-product-excerpt">
+        <p><%= product.description.content %></p>
+      </div>
+      <div class="noo-product-action">
+        <div class="noo-action">
+          <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
+            <span>Thêm vào giỏ</span>
+          <% end %>
+          <div class="yith-wcwl-add-to-wishlist">
+            <div class="yith-wcwl-add-button">
+              <a href="javascript:;" class="add_to_wishlist"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

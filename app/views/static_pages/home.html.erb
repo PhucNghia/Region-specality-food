@@ -391,7 +391,7 @@
                   <div class="masonry-item col-md-4 col-sm-6 product">
                     <div class="noo-product-inner">
                       <div class="noo-product-thumbnail">
-                        <%= link_to "#" do %>
+                        <%= link_to product_path(product.id) do %>
                           <%= image_tag product.image, style: "width: 400px; height: 400px;" %>
                         <% end %>
                         <div class="noo-rating">
@@ -401,11 +401,11 @@
                         </div>
                       </div>
                       <div class="noo-product-title">
-                        <h4><%= link_to product.name, "#" %></h4>
-                        <span class="price"><span class="amount">&#36;3.95</span></span>
+                        <h4><%= link_to product.name, product_path(product.id) %></h4>
+                        <span class="price"><span class="amount"><%= product.price %> vnđ</span></span>
                         <div class="noo-product-action">
                           <div class="noo-action">
-                            <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
+                            <%= link_to product_path(product.id), class: "button product_type_simple add_to_cart_button" do %>
                               <span>Mua ngay</span>
                             <% end %>
                           </div>
@@ -438,7 +438,7 @@
                   <div class="masonry-item col-md-4 col-sm-6 product">
                     <div class="noo-product-inner">
                       <div class="noo-product-thumbnail">
-                        <%= link_to "#" do %>
+                        <%= link_to product_path(product.id) do %>
                           <%= image_tag product.image, style: "width: 400px; height: 400px;" %>
                         <% end %>
                         <div class="noo-rating">
@@ -448,11 +448,11 @@
                         </div>
                       </div>
                       <div class="noo-product-title">
-                        <h4><%= link_to product.name, "#" %></h4>
-                        <span class="price"><span class="amount">&#36;3.95</span></span>
+                      <h4><%= link_to product.name, product_path(product.id) %></h4>
+                        <span class="price"><span class="amount"><%= product.price %> vnđ</span></span>
                         <div class="noo-product-action">
                           <div class="noo-action">
-                            <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
+                            <%= link_to product_path(product.id), class: "button product_type_simple add_to_cart_button" do %>
                               <span>Mua ngay</span>
                             <% end %>
                           </div>
@@ -485,7 +485,7 @@
                   <div class="masonry-item col-md-4 col-sm-6 product">
                     <div class="noo-product-inner">
                       <div class="noo-product-thumbnail">
-                        <%= link_to "#" do %>
+                        <%= link_to product_path(product.id) do %>
                           <%= image_tag product.image, style: "width: 400px; height: 400px;" %>
                         <% end %>
                         <div class="noo-rating">
@@ -495,11 +495,11 @@
                         </div>
                       </div>
                       <div class="noo-product-title">
-                        <h4><%= link_to product.name, "#" %></h4>
-                        <span class="price"><span class="amount">&#36;3.95</span></span>
+                        <h4><%= link_to product.name, product_path(product.id) %></h4>
+                        <span class="price"><span class="amount"><%= product.price %> vnđ</span></span>
                         <div class="noo-product-action">
                           <div class="noo-action">
-                            <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
+                            <%= link_to product_path(product.id), class: "button product_type_simple add_to_cart_button" do %>
                               <span>Mua ngay</span>
                             <% end %>
                           </div>

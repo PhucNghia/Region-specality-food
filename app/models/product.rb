@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_one :desctiption
+  has_one :description
   belongs_to :region
   belongs_to :category
   belongs_to :provider

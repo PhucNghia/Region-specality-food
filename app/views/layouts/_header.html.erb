@@ -1,84 +1,84 @@
 <header class="noo-header header-3">
-    <div class="navbar-wrapper">
-      <div class="navbar navbar-default">
-        <div class="container">
-          <div class="menu-position">
-            <div class="navbar-header pull-left">
-              <%= link_to root_path, class: "navbar-brand" do %>
-                <%= image_tag "logo.png" %>
-              <% end %>
-            </div>
-            <nav class="pull-right noo-menu-option">
-              <ul class="nav-collapse navbar-nav low-menu">
-                <li class="text-center sub-menu languages">
-                  <%= link_to "javascript:void(0)" do %>
-                    <%= image_tag img_language(session[:language]) %>
-                    <i class="fa fa-angle-down"></i>
-                  <% end %>
-                  <ul>
-                    <li data-lang= "en">
-                      <%= link_to "javascript:void(0)" do %>
-                        <%= image_tag "english.png" %>
-                        <span>English</span>
-                      <% end %></li>
-                    <li data-lang= "vi">
-                      <%= link_to "javascript:void(0)" do %>
-                        <%= image_tag "vietnamese.png" %>
-                        <span>Tiếng việt</span>
+  <div class="navbar-wrapper">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="menu-position">
+          <div class="navbar-header pull-left">
+            <%= link_to root_path, class: "navbar-brand" do %>
+              <%= image_tag "logo.png" %>
+            <% end %>
+          </div>
+          <nav class="pull-right noo-menu-option">
+            <ul class="nav-collapse navbar-nav low-menu">
+              <li class="text-center sub-menu languages">
+                <%= link_to "javascript:void(0)" do %>
+                  <%= image_tag img_language(session[:language]) %>
+                  <i class="fa fa-angle-down"></i>
+                <% end %>
+                <ul>
+                  <li data-lang= "en">
+                    <%= link_to "javascript:void(0)" do %>
+                      <%= image_tag "english.png" %>
+                      <span>English</span>
+                    <% end %></li>
+                  <li data-lang= "vi">
+                    <%= link_to "javascript:void(0)" do %>
+                      <%= image_tag "vietnamese.png" %>
+                      <span>Tiếng việt</span>
+                    <% end %>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-right">
+                <a class="cart-button" href="#">
+                  <i class="fa fa-shopping-cart"></i>Giỏ hàng
+                </a>
+              </li>
+              <% if user_signed_in? %>
+                <li class="text-center sub-menu">
+                  <a href="#">Profile</a>
+                  <ul class="text-left">
+                    <li>
+                      <%= link_to edit_user_registration_path do %>
+                        <i class="fa fa-user"></i>Edit
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to destroy_user_session_path, method: :delete do %>
+                        <i class="fa fa-sign-out"></i><%= t ".logout" %>
                       <% end %>
                     </li>
                   </ul>
                 </li>
-                <li class="text-right">
-                  <a class="cart-button" href="#">
-                    <i class="fa fa-shopping-cart"></i>Giỏ hàng
-                  </a>
-                </li>
-                <% if user_signed_in? %>
-                  <li class="text-center sub-menu">
-                    <a href="#">Profile</a>
-                    <ul class="text-left">
-                      <li>
-                        <%= link_to edit_user_registration_path do %>
-                          <i class="fa fa-user"></i>Edit
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to destroy_user_session_path, method: :delete do %>
-                          <i class="fa fa-sign-out"></i><%= t ".logout" %>
-                        <% end %>
-                      </li>
-                    </ul>
-                  </li>
-                <% else %>
-                  <li>
-                    <%= link_to new_user_session_path do %>
-                      <i class="fa fa-sign-in"></i>
-                      <%= t ".login" %>
-                    <% end %>
-                  </li>
-                <% end %>
-              </ul>
-            </nav>
-            <nav class="pull-right noo-main-menu">
-              <ul class="nav-collapse navbar-nav">
-                <li class="menu-item-has-children current-menu-item">
-                  <a href="#">Sản phẩm</a>
-                </li>
+              <% else %>
                 <li>
-                  <a href="#">Liên hệ</a>
+                  <%= link_to new_user_session_path do %>
+                    <i class="fa fa-sign-in"></i>
+                    <%= t ".login" %>
+                  <% end %>
                 </li>
-                <!-- <li class="menu-item-has-children">
-                  <a href="boxes.html">Boxes</a>
-                  <ul class="sub-menu">
-                    <li><a href="box-detail.html">Box Detail</a></li>
-                    <li><a href="box-detail.html">Box Detail</a></li>
-                  </ul>
-                </li> -->
-              </ul>
-            </nav>
-          </div>
+              <% end %>
+            </ul>
+          </nav>
+          <nav class="pull-right noo-main-menu">
+            <ul class="nav-collapse navbar-nav">
+              <li class="menu-item-has-children current-menu-item">
+                <a href="#">Sản phẩm</a>
+              </li>
+              <li>
+                <a href="#">Liên hệ</a>
+              </li>
+              <!-- <li class="menu-item-has-children">
+                <a href="boxes.html">Boxes</a>
+                <ul class="sub-menu">
+                  <li><a href="box-detail.html">Box Detail</a></li>
+                  <li><a href="box-detail.html">Box Detail</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
