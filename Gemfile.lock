@@ -88,6 +88,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.9.1)
       i18n (>= 0.7)
+    ffaker (2.9.0)
     ffi (1.10.0)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   devise (~> 4.1)
   factory_bot_rails
   faker
+  ffaker
   font-awesome-rails
   font-awesome-sass
   jbuilder (~> 2.5)

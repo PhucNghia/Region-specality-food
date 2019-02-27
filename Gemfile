@@ -21,6 +21,7 @@ gem "bootstrap-kaminari-views"
 gem "font-awesome-sass"
 gem "font-awesome-rails"
 gem "faker"
+gem "ffaker"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
