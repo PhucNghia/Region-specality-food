@@ -1,0 +1,7 @@
+<%= link_to booking_carts_path, class: "cart-button" do %>
+  <i class="fa fa-shopping-cart"></i>
+  <% if total_quantity_cart != 0 %>
+    (<%= total_quantity_cart %>)
+  <% end %>
+  <%= t ".cart"%>
+<% end %>

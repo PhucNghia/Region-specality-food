@@ -29,18 +29,16 @@
                   </li>
                 </ul>
               </li>
-              <li class="text-right">
-                <a class="cart-button" href="#">
-                  <i class="fa fa-shopping-cart"></i>Giỏ hàng
-                </a>
+              <li class="text-center link_cart">
+                <%= render "layouts/link_cart" %>
               </li>
               <% if user_signed_in? %>
                 <li class="text-center sub-menu">
-                  <a href="#">Profile</a>
+                  <a href="#"><%= current_user.name %></a>
                   <ul class="text-left">
                     <li>
                       <%= link_to edit_user_registration_path do %>
-                        <i class="fa fa-user"></i>Edit
+                        <i class="fa fa-user"></i><%= t ".edit" %>
                       <% end %>
                     </li>
                     <li>
@@ -51,7 +49,7 @@
                   </ul>
                 </li>
               <% else %>
-                <li>
+                <li class="text-right">
                   <%= link_to new_user_session_path do %>
                     <i class="fa fa-sign-in"></i>
                     <%= t ".login" %>
@@ -63,10 +61,10 @@
           <nav class="pull-right noo-main-menu">
             <ul class="nav-collapse navbar-nav">
               <li class="menu-item-has-children current-menu-item">
-                <a href="#">Sản phẩm</a>
+                <%= link_to t(".product"), products_path %>
               </li>
               <li>
-                <a href="#">Liên hệ</a>
+                <a href="#"><%= t ".contact" %></a>
               </li>
               <!-- <li class="menu-item-has-children">
                 <a href="boxes.html">Boxes</a>

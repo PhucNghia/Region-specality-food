@@ -22,6 +22,9 @@ gem "font-awesome-sass"
 gem "font-awesome-rails"
 gem "faker"
 gem "ffaker"
+gem "activerecord-session_store"
+# gem "redis-rails"
+# gem "redis-store", "~> 1.4.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

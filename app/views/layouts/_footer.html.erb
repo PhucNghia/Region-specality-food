@@ -7,9 +7,7 @@
               <a href="#">
                 <%= image_tag "logo.png" %>
               </a>
-              <p>
-              Đây là trang web giới thiệu về những đặc sản của sứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu
-              </p>
+              <p><%= t ".description" %></p>
             </div>
           </div>
           <div class="widget widget_noo_social">
@@ -26,7 +24,7 @@
           <div class="widget widget_text">
             <div class="textwidget">
               <div class="copyright">
-              Tháng 2 năm 2019.<br />
+              <%= t ".create_date" %><br />
               Design <i class="fa fa-heart-o"></i> Ngọc Nghĩa
               </div>
             </div>
@@ -34,15 +32,13 @@
         </div>
         <div class="col-md-4 col-sm-6 item-footer-four">
           <div class="widget widget_text">
-          <h4 class="widget-title">LIÊN HỆ</h4>
+          <h4 class="widget-title"><%= t ".contact" %></h4>
             <div class="textwidget">
-              <h5>Địa chỉ</h5>
-              <p>Xóm Mới, Nguyên Xá, Bắc Từ Liêm, Hà Nội</p>
-              <p>(or) CNTT1 - K10 ĐH Công Nghiệp HN</p>
-              <h5>Điện thoại</h5>
+              <h5><%= t ".address" %></h5>
+              <p><%= t ".address_detail" %></p>
+              <h5><%= t ".phone" %></h5>
               <p>
-                <a href="#">(+84) 382305339</a>  <br />
-                <a href="#">(+84) 382305448</a>
+                <a href="#">(+84) 382 305 339</a>  <br />
               </p>
               <h5>Email</h5>
               <p>
@@ -53,7 +49,7 @@
         </div>
         <div class="col-md-3 col-sm-6 item-footer-four">
           <div class="widget widget_text">
-            <h4 class="widget-title">SINH VIÊN THỰC HIỆN</h4>
+            <h4 class="widget-title"><%= t ".students_make" %></h4>
             <div class="textwidget">
               <ul>
                 <li><h5>Phúc Ngọc Nghĩa</h5></li>

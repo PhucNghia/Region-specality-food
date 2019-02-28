@@ -1,9 +1,9 @@
 <section class="noo-page-heading eff">
   <div class="container">
     <div class="noo-heading-content">
-      <h1 class="page-title eff">Danh sách sản phẩm</h1>
+      <h1 class="page-title eff"><%= t ".product_list" %></h1>
       <div class="noo-page-breadcrumb eff">
-        <a href="index.html" class="home">Đặc sản 3 miền</a>/<span>Sản phẩm</span>
+        <a href="index.html" class="home"><%= t ".specialty_three_regions" %></a>/<span><%= t ".product" %></span>
       </div>
     </div>
   </div>
@@ -17,9 +17,9 @@
             <%# <p class="commerce-result-count">Showing 1&ndash;9 of 18 results</p> %>
             <form class="commerce-ordering pull-right">
               <select name="orderby" class="orderby">
-                <option value="" selected='selected'>Sắp xếp</option>
-                <option value="">Sắp xếp theo giá</option>
-                <option value="">Sắp xếp theo tên</option>
+                <option value="" selected='selected'><%= t ".order" %></option>
+                <option value=""><%= t ".order_by_price" %></option>
+                <option value=""><%= t ".order_by_name" %></option>
               </select>
             </form>
             <%# <div class="product-style-control pull-left">
@@ -39,22 +39,22 @@
         <div class="noo-sidebar col-md-3">
           <div class="noo-sidebar-wrap">
             <div class="widget commerce widget_product_search">
-              <h3 class="widget-title">Tìm kiếm</h3>
+              <h3 class="widget-title"><%= t ".search" %></h3>
               <form>
-                <input type="search" id="commerce-product-search-field" class="search-field" placeholder="Tìm kiếm&hellip;" value="" name="searchProduct" />
+                <input type="search" id="commerce-product-search-field" class="search-field" placeholder="<%= t ".search" %>&hellip;" value="" name="searchProduct" />
                 <input type="submit" class="btn btn-success" value="Search" />
               </form>
             </div>
             <div class="widget commerce widget_product_categories">
-              <h3 class="widget-title">Vùng miền</h3>
+              <h3 class="widget-title"><%= t ".region" %></h3>
               <ul class="product-categories">
-                <li><a href="#">Miền Bắc</a></li>
-                <li><a href="#">Miền Trung</a></li>
-                <li><a href="#">Miền Nam</a></li>
+                <li><a href="#"><%= t ".north" %></a></li>
+                <li><a href="#"><%= t ".central" %></a></li>
+                <li><a href="#"><%= t ".south" %></a></li>
               </ul>
             </div>
             <div class="widget commerce widget_products">
-              <h3 class="widget-title">Được mua nhiều nhất</h3>
+              <h3 class="widget-title"><%= t ".most_bought" %></h3>
               <ul class="product_list_widget">
                 <% region_porduct(3).each do |product| %>
                   <li>
@@ -62,7 +62,7 @@
                       <%= image_tag product.image, style: "width: 100; height: 100;" %>
                       <span class="product-title"><%= product.name %></span>
                     <% end %>
-                    <span class="amount"><%= product.price %> vnđ</span>
+                    <span class="amount"><%= format_money product.price %></span>
                   </li>
                 <% end %>
               </ul>

@@ -12,9 +12,14 @@
   <body>
     <div class="site">
       <%= render "layouts/header" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <div style="padding-top: 50px;">
+      <% if flash.present? %>
+        <%= render "shared/flash_messages" %>
+      <% end %>
+      <% if action_name == "home" %>
+        <div style="padding-top: 0">
+      <% else %>
+        <div style="padding-top: 100px;">
+      <% end %>
         <%= yield %>
       </div>
       <%= render "layouts/footer" %>

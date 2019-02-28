@@ -12,18 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap-sprockets
 //= require language
-
+//= require alert
+//= require booking_cart
 
 // require template/jquery.min.js
 // require template/bootstrap.min.js
 // require template/jquery-migrate.min.js
-//= require template/modernizr-2.7.1.min.js
-//= require template/off-cavnass.js
+
+// require template/modernizr-2.7.1.min.js
+// require template/off-cavnass.js
+
 // require template/jquery.cookie.js
 // require template/style.selector.js
 // require template/script.js
+
 //= require template/custom.js
 //= require template/imagesloaded.pkgd.min.js
 //= require template/isotope.pkgd.min.js

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   post "languages/set_language", to: "languages#set_language"
   resources :products
+  resources :booking_carts
 
   namespace :admin do
     root "users#index"
