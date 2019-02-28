@@ -1431,25 +1431,25 @@ header .navbar,
   background-image: url(../template/store.jpg);
 }
 .noo-page-heading {
-  background-image: url('../template/banner/header-box.jpg');
+  background-image: url(/assets/banner/header-box.jpg);
 }
 .noo-page-heading.heading-2 {
-  background-image: url('../template/banner/header-business.jpg');
+  background-image: url(/assets/banner/header-business.jpg);
 }
 .noo-page-heading.heading-3 {
-  background-image: url('../template/banner/header-agency.jpg');
+  background-image: url(/assets/banner/header-agency.jpg);
 }
 .noo-page-heading.heading-4 {
-  background-image: url('../template/banner/header-fullwidth.jpg');
+  background-image: url(/assets/banner/header-fullwidth.jpg);
 }
 .noo-page-heading.heading-5 {
-  background-image: url('../template/banner/header-business.jpg');
+  background-image: url(/assets/banner/header-business.jpg);
 }
 .noo-page-heading.heading-6 {
-  background-image: url('../template/banner/header-center.jpg');
+  background-image: url(/assets/banner/header-center.jpg);
 }
 .noo-page-heading.heading-blog {
-  background-image: url('../template/banner/header-blog.jpg');
+  background-image: url(/assets/banner/header-blog.jpg);
 }
 .image-elastickstack.bg-1 {
   background-image: url(../template/stack/stack-1.jpg);

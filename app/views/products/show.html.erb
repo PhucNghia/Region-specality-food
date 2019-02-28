@@ -1,0 +1,128 @@
+  <section class="noo-page-heading eff heading-6">
+    <div class="container">
+      <div class="noo-heading-content">
+        <h1 class="page-title eff">Chi tiết sản phẩm</h1>
+        <div class="noo-page-breadcrumb eff">
+          <%= link_to "Đặc sản 3 miền", products_path, class: "home" %>
+          <span>/ Chi tiết</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="main">
+    <div class="commerce single-product noo-shop-main">
+      <div class="container">
+        <div class="row">
+          <div class="noo-main col-md-9">
+            <div class="product">
+              <div class="single-inner">
+                <div class="images">
+                  <div class="product-simple-image">
+                    <%= image_tag @product.image, style: "width: 300; height: 381" %>
+                  </div>
+                </div>
+                <div class="summary entry-summary">
+                  <h1 class="product_title entry-title"><%= @product.name %></h1>
+                  <p class="price"><span class="amount"><%= @product.price %> VNĐ</span></p>
+                  <p class="description"><%= @product.description.content %></p>
+                  <div class="product_meta">
+                    <span class="posted_in">Vị trí: <%= @product.region.name %></span>
+                  </div>
+                  <form class="cart">
+                    <div class="quantity">
+                      <input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4"/>
+                    </div>
+                    <button type="submit" class="single_add_to_cart_button button">Thêm vào giỏ</button>
+                  </form>
+                  <div class="yith-wcwl-add-to-wishlist">
+                    <div class="yith-wcwl-add-button">
+                      <a href="#" class="add_to_wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="noo-social-share">
+                    <span>Chia sẻ:</span>
+                    <a href="#share" class="noo-share" title="Share on Facebook">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#share" class="noo-share" title="Share on Twitter">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#share" class="noo-share" title="Share on Google+">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a href="#share" class="noo-share" title="Share on Pinterest">
+                      <i class="fa fa-pinterest"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="commerce-tabs">
+                <ul class="nav nav-tabs tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#tab-1">Chi tiết</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="tab-1">
+                    <p><%= @product.description.content %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="related products">
+                <h2>Sản phẩm liên quan</h2>
+                <div class="products row product-grid">
+                  <% region_porduct(3).each do |product| %>
+                    <div class="masonry-item noo-product-column col-md-4 col-sm-6 product">
+                      <div class="noo-product-inner">
+                        <div class="noo-product-thumbnail">
+                          <%= link_to product_path(product.id) do %>
+                            <%= image_tag product.image, style: "width: 600; height: 760" %>
+                            <span class="product-title"><%= product.title %></span>
+                          <% end %>
+                          <div class="noo-rating">
+                            <div class="star-rating">
+                              <span style="width:20%"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="noo-product-title">
+                          <h3><%= link_to product.name, product_path(product.id) %></h3>
+                          <span class="price"><span class="amount"><%= product.price %> vnđ</span></span>
+                          <div class="noo-product-action">
+                            <div class="noo-action">
+                              <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
+                                <span>Thêm vào giỏ</span>
+                              <% end %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="noo-sidebar col-md-3">
+            <div class="noo-sidebar-wrap">
+              <div class="widget commerce widget_products">
+                <h3 class="widget-title">Được mua nhiều nhất</h3>
+                <ul class="product_list_widget">
+                  <% region_porduct(2).each do |product| %>
+                    <li>
+                      <%= link_to product_path(product.id) do %>
+                        <%= image_tag product.image %>
+                        <span class="product-title"><%= product.title %></span>
+                      <% end %>
+                      <span class="amount"><%= product.price %> vnđ</span>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
