@@ -20,10 +20,12 @@ vi:
     header:
       product: "SẢN PHẨM"
       contact: "LIÊN HỆ"
-      cart: "Giỏ hàng"
+      admin_manage: "Quản lý"
       edit: "Chỉnh sửa"
       login: "Đăng nhập"
       logout: "Đăng xuất"
+    link_cart:
+      cart: "Giỏ hàng"
     footer:
       description: "Đây là trang web giới thiệu về những đặc sản của sứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
       create_date: "Tháng 2 năm 2019"

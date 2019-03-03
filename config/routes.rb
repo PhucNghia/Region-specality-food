@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  devise_for :users
   post "languages/set_language", to: "languages#set_language"
+  devise_for :users
   resources :products
   resources :booking_carts
 
   namespace :admin do
-    root "users#index"
+    root "statisticals#index"
     resources :users
+    resources :statisticals
   end
 end

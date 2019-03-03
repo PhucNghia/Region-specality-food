@@ -1,0 +1,35 @@
+<aside>
+  <div id="sidebar" class="nav-collapse ">
+    <!-- sidebar menu start-->
+    <!-- @{
+      var currentController = this.ViewContext.RouteData.Values["controller"].ToString();
+    } -->
+
+    <ul class="sidebar-menu" id="nav-accordion">
+      <li>
+        <a class="active" href="#">
+          <i class="fa fa-bar-chart"></i><span>Thống kê</span>
+        </a>
+      </li>
+      <li>
+        <a class="" href="#">
+          <i class="fa fa-user"></i><span>Quản lý người dùng</span>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a class="" href="#">
+          <i class="fa fa-eercast"></i><span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a href="javascript:;" class="#">
+          <i class="fa fa-shopping-cart"></i><span>Quản lý đặt hàng</span>
+        </a>
+        <ul class="sub">
+          <li><a href="#">Đặt hàng thành công</a></li>
+          <li><a href="javascript:;">Đơn đã hủy</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>
