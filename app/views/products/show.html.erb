@@ -1,10 +1,10 @@
   <section class="noo-page-heading eff heading-6">
     <div class="container">
       <div class="noo-heading-content">
-        <h1 class="page-title eff">Chi tiết sản phẩm</h1>
+        <h1 class="page-title eff"><%= t ".product_detail" %></h1>
         <div class="noo-page-breadcrumb eff">
-          <%= link_to "Đặc sản 3 miền", products_path, class: "home" %>
-          <span>/ Chi tiết</span>
+          <%= link_to t(".specialty_three_regions"), products_path, class: "home" %>
+          <span>/ <%= t ".detail" %></span>
         </div>
       </div>
     </div>
@@ -23,17 +23,18 @@
                 </div>
                 <div class="summary entry-summary">
                   <h1 class="product_title entry-title"><%= @product.name %></h1>
-                  <p class="price"><span class="amount"><%= @product.price %> VNĐ</span></p>
+                  <p class="price"><span class="amount"><%= format_money @product.price %></span></p>
                   <p class="description"><%= @product.description.content %></p>
                   <div class="product_meta">
                     <span class="posted_in">Vị trí: <%= @product.region.name %></span>
                   </div>
-                  <form class="cart">
+                  <%= form_tag "/booking_carts", method: :post, class: "cart" do %>
                     <div class="quantity">
-                      <input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4"/>
+                      <%= hidden_field_tag "id", @product.id %>
+                      <%= number_field_tag "quantity", set_number_product(@product), min: 1, class: "text-center" %>
                     </div>
-                    <button type="submit" class="single_add_to_cart_button button">Thêm vào giỏ</button>
-                  </form>
+                    <%= submit_tag t(".add_to_cart"), class: "single_add_to_cart_button button" %>
+                  <% end %>
                   <div class="yith-wcwl-add-to-wishlist">
                     <div class="yith-wcwl-add-button">
                       <a href="#" class="add_to_wishlist"></a>
@@ -41,7 +42,7 @@
                   </div>
                   <div class="clear"></div>
                   <div class="noo-social-share">
-                    <span>Chia sẻ:</span>
+                    <span><%= t ".share" %>:</span>
                     <a href="#share" class="noo-share" title="Share on Facebook">
                       <i class="fa fa-facebook"></i>
                     </a>
@@ -60,7 +61,7 @@
               <div class="commerce-tabs">
                 <ul class="nav nav-tabs tabs">
                   <li class="active">
-                    <a data-toggle="tab" href="#tab-1">Chi tiết</a>
+                    <a data-toggle="tab" href="#tab-1"><%= t ".detail" %></a>
                   </li>
                 </ul>
                 <div class="tab-content">
@@ -70,7 +71,7 @@
                 </div>
               </div>
               <div class="related products">
-                <h2>Sản phẩm liên quan</h2>
+                <h2><%= t ".product_relate" %></h2>
                 <div class="products row product-grid">
                   <% region_porduct(3).each do |product| %>
                     <div class="masonry-item noo-product-column col-md-4 col-sm-6 product">
@@ -78,7 +79,6 @@
                         <div class="noo-product-thumbnail">
                           <%= link_to product_path(product.id) do %>
                             <%= image_tag product.image, style: "width: 600; height: 760" %>
-                            <span class="product-title"><%= product.title %></span>
                           <% end %>
                           <div class="noo-rating">
                             <div class="star-rating">
@@ -88,11 +88,11 @@
                         </div>
                         <div class="noo-product-title">
                           <h3><%= link_to product.name, product_path(product.id) %></h3>
-                          <span class="price"><span class="amount"><%= product.price %> vnđ</span></span>
+                          <span class="price"><span class="amount"><%= format_money product.price %></span></span>
                           <div class="noo-product-action">
                             <div class="noo-action">
                               <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
-                                <span>Thêm vào giỏ</span>
+                                <span><%= t ".add_to_cart" %></span>
                               <% end %>
                             </div>
                           </div>
@@ -107,7 +107,7 @@
           <div class="noo-sidebar col-md-3">
             <div class="noo-sidebar-wrap">
               <div class="widget commerce widget_products">
-                <h3 class="widget-title">Được mua nhiều nhất</h3>
+                <h3 class="widget-title"><%= t ".most_bought" %></h3>
                 <ul class="product_list_widget">
                   <% region_porduct(2).each do |product| %>
                     <li>
@@ -115,7 +115,7 @@
                         <%= image_tag product.image %>
                         <span class="product-title"><%= product.title %></span>
                       <% end %>
-                      <span class="amount"><%= product.price %> vnđ</span>
+                      <span class="amount"><%= format_money product.price %></span>
                     </li>
                   <% end %>
                 </ul>

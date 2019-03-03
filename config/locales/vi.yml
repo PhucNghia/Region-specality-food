@@ -1,8 +1,98 @@
 vi:
+  errors:
+    messages:
+      not_saved: "Xin hãy kiểm tra lại lỗi"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "Không được để trống"
+  number:
+    currency:
+      format:
+        unit: " vnđ"
+        delimiter: ","
+        precision: 0
+        format: "%n%u" 
   layouts:
     header:
+      product: "SẢN PHẨM"
+      contact: "LIÊN HỆ"
+      cart: "Giỏ hàng"
+      edit: "Chỉnh sửa"
       login: "Đăng nhập"
       logout: "Đăng xuất"
+    footer:
+      description: "Đây là trang web giới thiệu về những đặc sản của sứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
+      create_date: "Tháng 2 năm 2019"
+      contact: "LIÊN HỆ"
+      address: "Địa chỉ"
+      address_detail: "CNTT1 - K10, ĐH Công Nghiệp Hà Nội"
+      phone: "Điện thoại"
+      students_make: "SINH VIÊN THỰC HIỆN"
+  products:
+    index:
+      product_list: "Danh sách sản phẩm"
+      specialty_three_regions: "Đặc sản ba miền"
+      product: "Sản phẩm"
+      order: "Sắp xếp"
+      order_by_price: "Sắp xếp theo tên"
+      order_by_name: "Sắp xếp theo giá"
+      search: "Tìm kiếm"
+      region: "Vùng miền"
+      north: "Miền Bắc"
+      central: "Miền Trung"
+      south: "Miền Nam"
+      most_bought: "Được mua nhiều nhất"
+    product:
+      bought_now: "Mua ngay"
+    show:
+      not_found: "Không tìm thấy sản phẩm!"
+      product_detail: "Chi tiết sản phẩm"
+      specialty_three_regions: "Đặc sản ba miền"
+      share: "Chia sẻ"
+      detail: "Chi tiết"
+      most_bought: "Được mua nhiều nhất"
+      product_relate: "Sản phẩm liên quan"
+      add_to_cart: "Thêm vào giỏ"
+  booking_carts:
+    index:
+      empty_cart: "Giỏ hàng rỗng. Mời bạn đặt mua!"
+      specialty_three_regions: "Đặc sản ba miền"
+      cart: "Giỏ hàng"
+      image: "Ảnh"
+      name: "Tên"
+      price: "Giá"
+      quantity: "Số lượng"
+      amount: "Thành tiền"
+      coupon: "Phiếu mua hàng"
+      enter_coupon_code: "Nhập mã phiếu nếu bạn có"
+      coupon_code: "Mã mua hàng..."
+      confirm: "Xác nhận"
+      total_cart: "Tổng giỏ hàng"
+      order: "Đặt hàng"
+    total_cart:
+      total_quantity: "Tổng số lượng"
+      total_amount: "Tổng tiền"
+    destroy:
+      empty_cart: "Giỏ hàng rỗng. Mời bạn đặt mua!"
+  static_pages:
+    home:
+      viet_specialty: "Đặc sản sứ việt!"
+      discovery_north_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN BẮC"
+      discovery_central_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN TRUNG"
+      discovery_south_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN NAM"
+      specialty_three_regions: "Đặc sản ba miền"
+      discovery_specialty_three_regions: "Khám phá đặc sản ba miền!"
+      north_specialty: "Đặc sản miền Bắc"
+      description_north_specialty: "Dọc dải đất miền Bắc có vô vàn những đặc sản hấp dẫn đã tạo nên danh tiếng như"
+      central_specialty: "Đặc sản miền Trung"
+      description_central_specialty: "Còn đây là danh sách sẽ đưa bạn dạo quanh miền Trung cùng với những món đặc sản hấp dẫn được nhiều du khách yêu thích"
+      south_specialty: "Đặc sản miền Nam"
+      description_south_specialty: "Sự đa dạng vùng miền cũng góp phần làm cho đặc sản của miền Nam phong phú và đặc biệt không “thua chị kém em”"
+      bought_now: "Mua ngay"
   admin:
     layouts:
       header:

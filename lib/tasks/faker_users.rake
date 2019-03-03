@@ -3,7 +3,7 @@ namespace :db do
     puts "Create User"
     User.create!(
       email: "admin@gmail.com",
-      name: FFaker::NameVN.name,
+      name: "Ngọc Nghĩa", #FFaker::NameVN.name,
       password: "123456",
       username: "admin",
       birthday: "23/08/1997",

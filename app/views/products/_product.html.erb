@@ -12,14 +12,14 @@
     </div>
     <div class="noo-product-title">
       <h3><%= link_to product.name, product_path(product.id) %></h3>
-      <span class="price"><span class="amount"><%= product.price%> vnđ</span></span>
+      <span class="price"><span class="amount"><%= format_money product.price %></span></span>
       <div class="noo-product-excerpt">
         <p><%= product.description.content %></p>
       </div>
       <div class="noo-product-action">
         <div class="noo-action">
-          <%= link_to "#", class: "button product_type_simple add_to_cart_button" do %>
-            <span>Thêm vào giỏ</span>
+          <%= link_to product_path(product.id), class: "button product_type_simple add_to_cart_button" do %>
+            <span><%= t ".bought_now" %></span>
           <% end %>
           <div class="yith-wcwl-add-to-wishlist">
             <div class="yith-wcwl-add-button">

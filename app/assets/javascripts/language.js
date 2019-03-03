@@ -1,5 +1,4 @@
-// $(document).on('turbolinks:load', function(){
-$(document ).ready(function() {
+$(document).on('turbolinks:load', function(){
   $('.languages ul li').click(function(e){
     language = $(this).attr('data-lang');
     $.ajax({

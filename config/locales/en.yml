@@ -1,8 +1,98 @@
 en:
+  errors:
+    messages:
+      not_saved: "Error"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "Not blank"
+  number:
+    currency:
+      format:
+        unit: "$"
+        delimiter: ","
+        precision: 2
+        format: "%u%n" 
   layouts:
     header:
+      product: "PRODUCT"
+      contact: "CONTACT"
+      cart: "Cart"
+      edit: "Edit"
       login: "Login"
       logout: "Logout"
+    footer:
+      description: "This is the website introducing Vietnamese specialties, stretching from the North - the beginning of the country until the beloved South."
+      create_date: "February, 2019"
+      contact: "CONTACT"
+      address: "ADDRESS"
+      address_detail: "CNTT1 - K10, Hanoi University of Industry"
+      phone: "Phone"
+      students_make: "STUDENTS MAKE"
+  products:
+    index:
+      product_list: "Product list"
+      specialty_three_regions: "Specialty three regions"
+      product: "Product"
+      order: "Order"
+      order_by_price: "Order by price"
+      order_by_name: "Order by name"
+      search: "Search"
+      region: "Region"
+      north: "North"
+      central: "Central"
+      south: "South"
+      most_bought: "Most bought"
+    product:
+      by_now: "Bought now"
+    show:
+      not_found: "Not found product!"
+      product_detail: "Product detail"
+      specialty_three_regions: "Specialty three regions"
+      detail: "Detail"
+      share: "Share"
+      most_bought: "Most bought"
+      product_relate: "Product relate"
+      add_to_cart: "Add to cart"
+  booking_carts:
+    index:
+      empty_cart: "Empty cart!"
+      specialty_three_regions: "Specailty three regions"
+      cart: "Cart"
+      image: "Image"
+      name: "Name"
+      price: "Price"
+      quantity: "Quantity"
+      amount: "Amount"
+      coupon: "Coupon"
+      enter_coupon_code: "Enter coupon code if you have"
+      coupon_code: "Coupon code..."
+      confirm: "Confirm"
+      total_cart: "Total cart"
+      order: "Order"
+    total_cart:
+      total_quantity: "Total quantity"
+      total_amount: "Total amount"
+    destroy:
+      empty_cart: "Empty cart!"
+  static_pages:
+    home:
+      viet_specialty: "Vietnam Specialty!"
+      discovery_north_specialty: "Discovery north specialty"
+      discovery_central_specialty: "Discovery central specialty"
+      discovery_south_specialty: "Discovery south specialty"
+      specialty_three_regions: "Specialty three regions"
+      discovery_specialty_three_regions: "Discovery specialty three regions"
+      north_specialty: "North specialty"
+      description_north_specialty: "Along the strip of northern land there are countless attractive specialties that have created such reputation"
+      central_specialty: "Central specialty"
+      description_central_specialty: "And this is a list that will take you around the Central with attractive specialties that many tourists love"
+      south_specialty: "South specialty"
+      description_south_specialty: "The regional diversity also contributes to the richness of the South region's specialties and especially “no less than me”"
+      bought_now: "Bought now"
   admin:
     layouts:
       header:

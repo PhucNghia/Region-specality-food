@@ -1,0 +1,55 @@
+<section class="noo-page-heading eff">
+  <div class="container">
+    <div class="noo-heading-content">
+      <h1 class="page-title eff"><%= t ".cart" %></h1>
+      <div class="noo-page-breadcrumb eff">
+        <%= link_to t(".specialty_three_regions"), root_path, class: "home" %>
+        /<span><%= t ".cart" %></span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="main">
+  <div class="commerce commerce-page commerce-cart noo-shop-main">
+    <div class="container">
+      <div class="row">
+        <div class="noo-main col-md-12">
+          <table class="shop_table cart">
+            <thead>
+              <tr class="text-center">
+                <th class="col-md-2 text-center"><%= t ".imgae" %></th>
+                <th class="col-md-2 text-center"><%= t ".name" %></th>
+                <th class="col-md-2 text-center"><%= t ".price" %></th>
+                <th class="col-md-2 text-center"><%= t ".quantity" %></th>
+                <th class="col-md-3 text-center"><%= t ".amount" %></th>
+                <th class="col-md-1 text-center">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody id="cart">
+              <%= render partial: "cart", collection: @booking_carts, as: :product %>
+            </tbody>
+          </table>
+          <div class="cart-collaterals">
+            <div class="noocart-coupon">
+              <label for="coupon_code"><%= t ".coupon" %></label>
+              <p><%= t ".enter_coupon_code" %></p>
+              <input type="text" name="noo_coupon_code" class="input-text" id="noo_coupon_code" value="" placeholder="<%= t ".coupon_code" %>" />
+              <button class="noo-apply-coupon button"><%= t ".confirm" %></button>
+            </div>
+            <div class="col-md-3 cart_totals">
+              <h2><%= t ".total_cart" %></h2>
+              <table id="total_cart">
+                <%= render "total_cart" %>
+              </table>
+              <div class="wc-proceed-to-checkout text-center">
+                <form>
+                  <button class="checkout-button button alt wc-forward" type="submit"><%= t ".order" %></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
