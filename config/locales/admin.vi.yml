@@ -1,0 +1,37 @@
+vi:
+  confirm_destroy: "Bạn có muốn xóa không?"
+  ok: "Đồng ý"
+  cancel: "Hủy"
+  admin:
+    layouts:
+      header:
+        admin_manage: "Quản lý"
+    users:
+      form:
+        close: "Đóng"
+        edit: "Cập nhật"
+        new: "Tạo mới"
+        update: "Cập nhật"
+        create: "Tạo mới"
+      index:
+        user_list: "Danh sách người dùng"
+        code: "Mã"
+        name: "Họ tên"
+        email: "Email"
+        phone: "Số điện thoại"
+        gender: "Giới tính"
+        role: "Chức vụ"
+        option: "Tùy chọn"
+        show: "Xem"
+        edit: "Chỉnh sửa"
+        del: "Xóa"
+      edit:
+        edit_user: "Chỉnh sửa thông tin"
+      update:
+        update_success: "Cập nhật thành công"
+        update_failed: "Cập nhật thất bại"
+      destroy:
+        destroy_success: "Xóa thành công"
+        destroy_failed: "Xóa thất bại"
+      show:
+        detail_infor: "Thông tin chi tiết"

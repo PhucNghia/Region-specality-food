@@ -1,0 +1,20 @@
+$(document).ready(function(){
+  $('#new-user-modal').html('<%= j render "form", type: :patch %>');
+  $('#new-user-modal').modal('show');
+  $('.modal-title').html('<%= j t ".edit_user" %>');
+
+  $('.error').css('color', 'red');
+  $('.error').parent().find('input').css('border', '1px solid red');
+
+  <% if flash[:danger] %>
+    $('#alert-notification').addClass('alert-danger');
+    $('#alert-notification').append('<%= j flash[:danger] %>');
+    $('#alert-notification').show();
+    $('#alert-notification').fadeOut(7000);
+  <% elsif flash[:success] %>
+    $('#alert-notification').addClass('alert-success');
+    $('#alert-notification').append('<%= j flash[:success] %>');
+    $('#alert-notification').show();
+    $('#alert-notification').fadeOut(7000);
+  <% end %>
+});

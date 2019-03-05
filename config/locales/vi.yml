@@ -1,21 +1,11 @@
 vi:
-  errors:
-    messages:
-      not_saved: "Xin hãy kiểm tra lại lỗi"
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            current_password:
-              blank: "Không được để trống"
   number:
     currency:
       format:
         unit: " vnđ"
         delimiter: ","
         precision: 0
-        format: "%n%u" 
+        format: "%n%u"
   layouts:
     header:
       product: "SẢN PHẨM"

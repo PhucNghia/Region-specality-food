@@ -1,0 +1,31 @@
+en:
+  errors:
+    messages:
+      not_saved: "Error"
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        username: "Username"
+        email: "Email"
+        birthday: "Birthday"
+        address: "Address"
+        phone: "Phone"
+        password: "Password"
+        password_confirmation: "Password confirmtion"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Not blank"
+            email:
+              blank: "Not blank"
+              taken: "Taken"
+            current_password:
+              blank: "Not blank"
+            password:
+              blank: "Not blank"
+              too_short: "Too short. 6 characters minimum"
+            password_confirmation:
+              confirmation: "Password incorrect"

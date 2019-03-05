@@ -1,0 +1,16 @@
+$('#new-user-modal').html('<%= j render "form", type: :post %>');
+$('#new-user-modal').modal('show');
+
+$('.error').css('color', 'red');
+$('.error').parent().find('input').css('border', '1px solid red');
+<% if flash[:danger] %>
+  resetAlert();
+  $('#alert-notification').addClass('alert-danger');
+  $('#alert-notification').append('<%= j flash[:danger] %>');
+  $('#alert-notification').show();
+<% elsif flash[:success] %>
+  resetAlert();
+  $('#alert-notification').addClass('alert-success');
+  $('#alert-notification').append('<%= j flash[:success] %>');
+  $('#alert-notification').show();
+<% end %>

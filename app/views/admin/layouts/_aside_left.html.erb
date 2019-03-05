@@ -1,25 +1,20 @@
 <aside>
   <div id="sidebar" class="nav-collapse ">
-    <!-- sidebar menu start-->
-    <!-- @{
-      var currentController = this.ViewContext.RouteData.Values["controller"].ToString();
-    } -->
-
     <ul class="sidebar-menu" id="nav-accordion">
       <li>
-        <a class="active" href="#">
+        <%= link_to admin_statisticals_path, class: set_active("statisticals", controller_name) do %>
           <i class="fa fa-bar-chart"></i><span>Thống kê</span>
-        </a>
+        <% end %>
       </li>
       <li>
-        <a class="" href="#">
+        <%= link_to admin_users_path, class: set_active("users", controller_name) do %>
           <i class="fa fa-user"></i><span>Quản lý người dùng</span>
-        </a>
+        <% end %>
       </li>
       <li class="sub-menu">
-        <a class="" href="#">
+         <%= link_to admin_products_path, class: set_active("products", controller_name) do %>
           <i class="fa fa-eercast"></i><span>Quản lý sản phẩm</span>
-        </a>
+        <% end %>
       </li>
       <li class="sub-menu">
         <a href="javascript:;" class="#">

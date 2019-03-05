@@ -10,8 +10,11 @@ class User < ApplicationRecord
   has_many :comments
   belongs_to :role
 
+  enum gender: {female: 0, male: 1, other: 2}
+
   validates :name, presence: true
   validates :email, presence: true
+  validates :password, presence: true
   # validates :email, uniqueness: true
 
   def login

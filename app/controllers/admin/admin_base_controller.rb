@@ -1,6 +1,8 @@
 module Admin
   class AdminBaseController < ApplicationController
     before_action :verify_admin!
+    include AdminBaseHelper
+
     layout "admin/layouts/application_admin"
 
     private

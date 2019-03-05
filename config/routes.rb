@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "statisticals#index"
-    resources :users
     resources :statisticals
+    resources :users
+    resources :products
   end
 end
