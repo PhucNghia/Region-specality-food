@@ -1,44 +1,73 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to "Admin Home", admin_root_path, class: "navbar-brand" %>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to "javascript:void(0)", class: "dropdown-toggle languages", "data-toggle": "dropdown" do %>
-            <%= image_tag img_language(session[:language]) %>
-          <i class="fa fa-angle-down"></i>
-          <% end %>
-          <ul class="dropdown-menu dropdown-menu-right languages" role="menu">
-            <li data-lang= "en">
-              <%= link_to "javascript:void(0)" do %>
-                <%= image_tag "english.png" %>
-                <span>English</span>
-              <% end %>
-            </li>
-            <li data-lang= "vi">
-              <%= link_to "javascript:void(0)" do %>
-                <%= image_tag "vietnamese.png" %>
-                <span>Tiếng việt</span>
-              <% end %>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Link</a></li>
-        <% if user_signed_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#"><%= link_to "profile", edit_user_registration_path %></a></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t(".login"), new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </div>
+<header class="header black-bg">
+  <div class="sidebar-toggle-box">
+    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Chuyển đổi điều hướng"></div>
   </div>
-</nav>
+  <!--logo start-->
+  <a href="#" class="logo"><b>Đặc sản<span> 3 miền</span></b></a>
+  <!--Quantity of access-->
+  <input type="hidden" id="access-quantity" value="1" />
+  <div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+      <!-- notification dropdown start-->
+      <li id="header_notification_bar" class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+          <i class="fa fa-bell-o"></i>
+          <span class="badge bg-warning">2</span>
+        </a>
+        <ul class="dropdown-menu extended notification">
+          <div class="notify-arrow notify-arrow-yellow"></div>
+          <li>
+            <p class="yellow">Bạn có 2 thông báo</p>
+          </li>
+          <li>
+            <a href="index.html#">
+              <span class="label label-warning"><i class="fa fa-bell"></i></span>
+              User 1 đã đặt hàng
+              <span class="small italic">40p trước</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#">
+              <span class="label label-warning"><i class="fa fa-bell"></i></span>
+              User1 đã đăng ký
+              <span class="small italic">50p trước</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#">Đánh dấu đã đọc</a>
+          </li>
+        </ul>
+      </li>
+      <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+  </div>
+  <div class="top-menu">
+    <ul class="nav pull-right top-menu">
+      <li><a class="logout" href="#">Đăng xuất</a></li>
+    </ul>
+    <ul class="nav pull-right top-menu select-languages">
+      <li class="languages">
+        <%= link_to "javascript:void(0)", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+          <%= image_tag img_language(session[:language]), style: "" %>
+        <i class="fa fa-angle-down"></i>
+        <% end %>
+        <ul class="dropdown-menu dropdown-menu-right languages" role="menu">
+          <li data-lang= "en">
+            <%= link_to "javascript:void(0)" do %>
+              <%= image_tag "english.png" %>
+              <span>English</span>
+            <% end %>
+          </li>
+          <li data-lang= "vi">
+            <%= link_to "javascript:void(0)" do %>
+              <%= image_tag "vietnamese.png" %>
+              <span>Tiếng việt</span>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>

@@ -30,7 +30,11 @@
                 </ul>
               </li>
               <li class="text-center link_cart">
-                <%= render "layouts/link_cart" %>
+                <% if current_user && current_user.role.name == "admin" %>
+                  <%= link_to t(".admin_manage"), admin_root_path %>
+                <% else %>
+                  <%= render "layouts/link_cart" %>
+                <% end %>
               </li>
               <% if user_signed_in? %>
                 <li class="text-center sub-menu">
