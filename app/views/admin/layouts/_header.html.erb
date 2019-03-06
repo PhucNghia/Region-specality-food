@@ -3,7 +3,9 @@
     <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Chuyển đổi điều hướng"></div>
   </div>
   <!--logo start-->
-  <a href="#" class="logo"><b>Đặc sản<span> 3 miền</span></b></a>
+  <%= link_to admin_root_path, class: "logo" do %>
+    <b><%= t ".slogan1" %><span><%= t ".slogan2" %></span></b>
+  <% end %>
   <!--Quantity of access-->
   <input type="hidden" id="access-quantity" value="1" />
   <div class="nav notify-row" id="top_menu">
@@ -45,7 +47,13 @@
   </div>
   <div class="top-menu">
     <ul class="nav pull-right top-menu">
-      <li><a class="logout" href="#">Đăng xuất</a></li>
+      <li>
+        <% if current_user %>
+          <%= link_to destroy_user_session_path, class: "logout", method: :delete do %>
+            <i class="fa fa-sign-out"></i><%= t ".logout" %>
+          <% end %>
+        <% end %>
+      </li>
     </ul>
     <ul class="nav pull-right top-menu select-languages">
       <li class="languages">

@@ -6,6 +6,21 @@ en:
     layouts:
       header:
         admin_manage: "Manager"
+        slogan1: "3 regions "
+        slogan2: "specialties"
+        logout: "Logout"
+      aside_left:
+        statisticals: "Statisticals"
+        user_management: "User management"
+        product_management: "Product management"
+        order_management: "Order management"
+        order_finish: "Order success"
+        order_cancel: "Order cancel"
+      footer:
+        3_regions_specialties: "3 regions specialties"
+    statisticals:
+      index:
+        access_statistics: "Access statistics"
     users:
       form:
         close: "Close"
@@ -26,6 +41,8 @@ en:
         edit: "Edit"
         del: "Delete"
       edit:
+        edit_product: "Edit product"
+      edit:
         edit_user: "Edit infor"
       update:
         update_success: "Update success"
@@ -35,3 +52,47 @@ en:
         destroy_failed: "Delete failed"
       show:
         detail_infor: "Detail infor"
+    products:
+      form:
+        close: "Close"
+        edit: "Update"
+        new: "Create"
+        update: "Update"
+        create: "Create"
+      index:
+        new: "New"
+        product_list: "Product list"
+        code: "Code"
+        name: "Product name"
+        price: "Price"
+        status: "Status"
+        region: "Region"
+        option: "Option"
+        show: "Show"
+        edit: "Edit"
+        del: "Delete"
+      new:
+        new_product: "Create new product"
+      create:
+        create_success: "Create success"
+        create_failed: "Create failed"
+      update:
+        update_success: "Update success"
+        update_failed: "Update failed"
+      destroy:
+        destroy_success: "Delete success"
+        destroy_failed: "Delete failed"
+      show:
+        product_detail: "Product detail"
+    orders:
+      index:
+        order_list: "Order list"
+        code: "Order code"
+        user_name: "User name"
+        phone: "Phone"
+        product_name: "Product name"
+        quantity: "Quantity"
+        unit_price: "Unit price"
+        amount: "Amount"
+        date: "Date"
+        option: "Option"

@@ -1,2 +1,74 @@
-class Admin::ProductsController < ApplicationController
+module Admin
+  class ProductsController < AdminBaseController
+    before_action :load_product, only: %i(show edit update destroy)
+    skip_before_action :verify_authenticity_token, only: %i(create update)
+
+    def index
+      @products = Product.all
+    end
+
+    def show; end
+
+    def new
+      @product = Product.new
+      respond_to do |format|
+        format.js
+      end
+    end
+
+    def create
+      params[:product][:image] = "product/" + params[:product][:image].original_filename
+      @product = Product.new product_params
+      if @product.save
+        flash[:success] = t ".create_success"
+        redirect_to admin_products_path
+      else
+        flash.now[:danger] = t ".create_failed"
+        respond_to do |format|
+          format.js {render :new}
+        end
+      end
+    end
+
+    def edit; end
+
+    def update
+      if params[:product][:image] != @product.image
+        params[:product][:image] = "product/" + params[:product][:image].original_filename
+      end
+      if @product.update_attributes product_params
+        flash[:success] = t ".update_success"
+        redirect_to admin_products_path
+      else
+        flash.now[:danger] = t ".update_failed"
+        respond_to do |format|
+          format.js {render :edit}
+          format.html {redirect_back fallback_location: admin_products_path}
+        end
+      end
+    end
+
+    def destroy
+      if @product.destroy
+        flash[:success] = t ".destroy_success"
+      else
+        flash[:danger] = t ".destroy_failed"
+      end
+      redirect_to admin_products_path
+    end
+
+    private
+
+    def load_product
+      @product = Product.find_by id: params[:id]
+      return if @product
+      flash[:danger] = t "users.show.not_found"
+      redirect_to root_path
+    end
+
+    def product_params
+      params.require(:product).permit :title, :name, :image, :price, :discount, :status,
+        :quantities, :region_id, :category_id, :provider_id
+    end
+  end
 end

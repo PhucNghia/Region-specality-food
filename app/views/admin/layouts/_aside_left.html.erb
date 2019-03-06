@@ -3,26 +3,28 @@
     <ul class="sidebar-menu" id="nav-accordion">
       <li>
         <%= link_to admin_statisticals_path, class: set_active("statisticals", controller_name) do %>
-          <i class="fa fa-bar-chart"></i><span>Thống kê</span>
+          <i class="fa fa-bar-chart"></i><span><%= t ".statisticals" %></span>
         <% end %>
       </li>
       <li>
         <%= link_to admin_users_path, class: set_active("users", controller_name) do %>
-          <i class="fa fa-user"></i><span>Quản lý người dùng</span>
+          <i class="fa fa-user"></i><span><%= t ".user_management" %></span>
         <% end %>
       </li>
       <li class="sub-menu">
          <%= link_to admin_products_path, class: set_active("products", controller_name) do %>
-          <i class="fa fa-eercast"></i><span>Quản lý sản phẩm</span>
+          <i class="fa fa-eercast"></i><span><%= t ".product_management" %></span>
         <% end %>
       </li>
       <li class="sub-menu">
         <a href="javascript:;" class="#">
-          <i class="fa fa-shopping-cart"></i><span>Quản lý đặt hàng</span>
+          <i class="fa fa-shopping-cart"></i><span><%= t ".order_management" %></span>
         </a>
         <ul class="sub">
-          <li><a href="#">Đặt hàng thành công</a></li>
-          <li><a href="javascript:;">Đơn đã hủy</a></li>
+          <li>
+            <%= link_to t(".order_finish"), admin_orders_path %>
+          </li>
+          <li><a href="javascript:;"><%= t ".order_cancel" %></a></li>
         </ul>
       </li>
     </ul>

@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, authentication_keys: [:login]
   attr_writer :login
+  attr_writer :ignore_valid_pass
 
   has_many :orders
   has_many :rates
@@ -12,9 +13,8 @@ class User < ApplicationRecord
 
   enum gender: {female: 0, male: 1, other: 2}
 
-  validates :name, presence: true
-  validates :email, presence: true
-  validates :password, presence: true
+  validates :name, :email, :phone, :address, presence: true
+  validates :password, presence: true if :ignore_valid_pass.nil?
   # validates :email, uniqueness: true
 
   def login

@@ -7,12 +7,24 @@ vi:
       user:
         name: "Tên"
         username: "Username"
+        login: "Tên đăng nhập"
         email: "Email"
         birthday: "Ngày sinh"
         address: "Địa chỉ"
         phone: "Số điện thoại"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+      product:
+        title: "Tiêu đề"
+        name: "Tên"
+        image: "Hình ảnh"
+        price: "Giá hiện tại"
+        discount: "Giảm giá"
+        status: "Trạng thái"
+        quantity: "Số lượng"
+        region_id: "Khu vực"
+        category_id: "Thể loại"
+        provider_id: "Nhà cung cấp"
     errors:
       models:
         user:
@@ -29,4 +41,22 @@ vi:
               too_short: "Quá ngắn. Tối thiểu 6 ký tự"
             password_confirmation:
               confirmation: "Mật khẩu không khớp"
+        product:
+          attributes:
+            title:
+              blank: "Không được để trống"
+            name:
+              blank: "Không được để trống"
+            price:
+              blank: "Không được để trống"
+            status:
+              blank: "Không được để trống"
+            quantity:
+              blank: "Không được để trống"
+            region_id:
+              blank: "Không được để trống"
+            category_id:
+              blank: "Không được để trống"
+            provider_id:
+              blank: "Không được để trống"
 

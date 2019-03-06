@@ -5,6 +5,7 @@
 //= require language
 //= require alert
 //= require admin/user
+//= require admin/product
 //= require sweetalert/sweetalert.min.js
 //= require i18n
 //= require i18n.js

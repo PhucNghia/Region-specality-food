@@ -1,0 +1,6 @@
+$('#new-product-modal').html('<%= j render "form", type: :post %>');
+$('#new-product-modal').modal('show');
+$('.modal-title').html('<%= j t ".product_detail" %>');
+$('input').prop('disabled', true);
+$('select').prop('disabled', true);
+$('.submit').hide();

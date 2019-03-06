@@ -42,9 +42,13 @@
                 <%= render "total_cart" %>
               </table>
               <div class="wc-proceed-to-checkout text-center">
-                <form>
-                  <button class="checkout-button button alt wc-forward" type="submit"><%= t ".order" %></button>
-                </form>
+                <%= link_to update_info_user_path, remote: set_remote do %>
+                  <% button_tag t(".order"), type: "button", class: "checkout-button button alt wc-forward" %>
+                <% end %>
+                <%#= form_tag user_path, method: :post do %>
+                  <%#= hidden_field_tag "user_id", current_user.id if current_user %>
+                  <%#= submit_tag t(".order"), class: "checkout-button button alt wc-forward" %>
+                <%# end %>
               </div>
             </div>
           </div>
@@ -52,4 +56,5 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="order-modal" role="dialog"></div>
 </div>

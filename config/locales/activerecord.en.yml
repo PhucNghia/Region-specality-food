@@ -7,12 +7,24 @@ en:
       user:
         name: "Name"
         username: "Username"
+        login: "User name"
         email: "Email"
         birthday: "Birthday"
         address: "Address"
         phone: "Phone"
         password: "Password"
         password_confirmation: "Password confirmtion"
+      product:
+        title: "Title"
+        name: "Name"
+        image: "Image"
+        price: "Price"
+        discount: "Discount"
+        status: "Status"
+        quantity: "Quantity"
+        region_id: "Region"
+        category_id: "Category"
+        provider_id: "Provider"
     errors:
       models:
         user:
@@ -29,3 +41,21 @@ en:
               too_short: "Too short. 6 characters minimum"
             password_confirmation:
               confirmation: "Password incorrect"
+        product:
+          attributes:
+            title:
+              blank: "Not blank"
+            name:
+              blank: "Not blank"
+            price:
+              blank: "Not blank"
+            status:
+              blank: "Not blank"
+            quantity:
+              blank: "Not blank"
+            region_id:
+              blank: "Not blank"
+            category_id:
+              blank: "Not blank"
+            provider_id:
+              blank: "Not blank"
