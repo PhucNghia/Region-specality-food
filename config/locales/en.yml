@@ -1,21 +1,11 @@
 en:
-  errors:
-    messages:
-      not_saved: "Error"
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            current_password:
-              blank: "Not blank"
   number:
     currency:
       format:
         unit: "$"
         delimiter: ","
         precision: 2
-        format: "%u%n" 
+        format: "%u%n"
   layouts:
     header:
       product: "PRODUCT"

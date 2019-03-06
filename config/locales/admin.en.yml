@@ -1,0 +1,37 @@
+en:
+  confirm_destroy: "Are you sure you want to delete?"
+  ok: "Ok"
+  cancel: "Cancel"
+  admin:
+    layouts:
+      header:
+        admin_manage: "Manager"
+    users:
+      form:
+        close: "Close"
+        edit: "Update"
+        new: "Create"
+        update: "Update"
+        create: "Create"
+      index:
+        user_list: "User list"
+        code: "Code"
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        gender: "Gender"
+        role: "Role"
+        option: "Option"
+        show: "Show"
+        edit: "Edit"
+        del: "Delete"
+      edit:
+        edit_user: "Edit infor"
+      update:
+        update_success: "Update success"
+        update_failed: "Update failed"
+      destroy:
+        destroy_success: "Delete success"
+        destroy_failed: "Delete failed"
+      show:
+        detail_infor: "Detail infor"

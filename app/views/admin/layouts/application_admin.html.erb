@@ -6,10 +6,17 @@
 
     <%= stylesheet_link_tag    'admin/admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'admin/admin', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag "favicon.jpg" %>
   </head>
 
   <body>
     <%= render "admin/layouts/header" %>
+    <div id="alert-notification" class="alert-notification alert-notification-dismissible">
+      <a class="close" data-dismiss="alert-notification" aria-label="close">&times;</a>
+    </div>
+    <% if flash.present? %>
+      <%= render "shared/flash_messages" %>
+    <% end %>
     <%= render "admin/layouts/aside_left" %>
     <section id="main-content">
       <section class="wrapper">
@@ -19,6 +26,6 @@
       </section>
     </section>
       <%= render "admin/layouts/footer" %>
-    
+
   </body>
 </html>

@@ -1,0 +1,6 @@
+$('#new-user-modal').html('<%= j render "form", type: :post %>');
+$('#new-user-modal').modal('show');
+$('.modal-title').html('<%= j t ".detail_infor" %>');
+$('input').prop('disabled', true);
+$('.password').hide();
+$('.submit').hide();

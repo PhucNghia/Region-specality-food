@@ -1,0 +1,32 @@
+vi:
+  errors:
+    messages:
+      not_saved: "Xin hãy kiểm tra lại lỗi"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        username: "Username"
+        email: "Email"
+        birthday: "Ngày sinh"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Không được để trống"
+            email:
+              blank: "Không được để trống"
+              taken: "Đã tồn tại"
+            current_password:
+              blank: "Không được để trống"
+            password:
+              blank: "Không được để trống"
+              too_short: "Quá ngắn. Tối thiểu 6 ký tự"
+            password_confirmation:
+              confirmation: "Mật khẩu không khớp"
+

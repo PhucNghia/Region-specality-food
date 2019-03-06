@@ -1,0 +1,5 @@
+translations:
+- file: "public/javascripts/i18n/en.js"
+  only: "en.*"
+- file: "public/javascripts/i18n/vi.js"
+  only: "vi.*"
