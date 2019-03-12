@@ -1,0 +1,21 @@
+vi:
+  comments:
+    create:
+      create_success: "Tạo thành công"
+      blank_content: "Bạn chưa nhập nội dung"
+    update:
+      update_success: "Cập nhật thành công"
+      blank_content: "Bạn chưa nhập nội dung"
+    destroy:
+      delete_success: "Xóa thành công"
+    comment:
+      edit: "Sửa"
+      delete: "Xóa"
+      reply: "Trả lời"
+    replies:
+      edit: "Sửa"
+      delete: "Xóa"
+      reply: "Trả lời"
+    form:
+      enter_comment: "Nhập bình luận..."
+      submit: "Bình luận"

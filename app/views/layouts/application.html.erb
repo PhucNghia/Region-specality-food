@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>RegionSpecalityFood</title>
+    <%= include_gon %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
@@ -12,6 +13,9 @@
   <body>
     <div class="site">
       <%= render "layouts/header" %>
+      <div id="alert-notification" class="alert-notification alert-notification-dismissible">
+        <a class="close" data-dismiss="alert-notification" aria-label="close">&times;</a>
+      </div>
       <% if flash.present? %>
         <%= render "shared/flash_messages" %>
       <% end %>

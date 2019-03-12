@@ -1,0 +1,21 @@
+en:
+  comments:
+    create:
+      create_success: "Create success"
+      blank_content: "Content can't be blank"
+    update:
+      update_success: "Update success"
+      blank_content: "Content can't be blank"
+    destroy:
+      delete_success: "Delete success"
+    comment:
+      edit: "Edit"
+      delete: "Delete"
+      reply: "Reply"
+    replies:
+      edit: "Edit"
+      delete: "Delete"
+      reply: "Reply"
+    form:
+      enter_comment: "Enter your comment..."
+      submit: "Comment"

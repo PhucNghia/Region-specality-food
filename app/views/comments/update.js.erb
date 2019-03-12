@@ -1,9 +1,14 @@
-$('#new-product-modal').html('<%= j render "form", type: :post %>');
-$('#new-product-modal').modal('show');
-$('.modal-title').html('<%= j t ".new_product" %>');
+$('.comments-title').html('<%= j count_comment(@product).to_s %> Comments');
+$('.comments-list').html('<%= j render partial: "comments/comment", collection: @comments, as: :comment %>');
+$('#content').val('');
 
-$('.error').css('color', 'red');
-$('.error').parent().find('input').css('border', '1px solid red');
+// Mention user
+var comment_ids = '<%= j @comment_ids.to_s %>';
+var mention_usernames = '<%= j @mention_usernames.to_s %>';
+comment_ids = comment_ids.split(',');
+for(index = 0; index < comment_ids.length; index++){
+  mention_user(comment_ids[index], mention_usernames);
+}
 
 $('#alert-notification').html('');
 <% if flash[:danger] %>

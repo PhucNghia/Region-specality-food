@@ -27,6 +27,7 @@ gem "activerecord-session_store"
 # gem "redis-store", "~> 1.4.0"
 gem 'simple_form'
 gem 'i18n-js'
+gem 'gon'
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

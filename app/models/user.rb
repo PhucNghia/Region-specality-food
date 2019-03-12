@@ -17,6 +17,8 @@ class User < ApplicationRecord
   validates :password, presence: true if :ignore_valid_pass.nil?
   # validates :email, uniqueness: true
 
+  scope :by_id, ->(id){where id: id} 
+
   def login
     @login || self.username || self.email
   end

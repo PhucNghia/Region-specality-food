@@ -1,0 +1,31 @@
+vi:
+  products:
+    index:
+      product_list: "Danh sách sản phẩm"
+      specialty_three_regions: "Đặc sản ba miền"
+      product: "Sản phẩm"
+      order: "Sắp xếp"
+      order_by_price: "Sắp xếp theo tên"
+      order_by_name: "Sắp xếp theo giá"
+      search: "Tìm kiếm"
+      region: "Vùng miền"
+      north: "Miền Bắc"
+      central: "Miền Trung"
+      south: "Miền Nam"
+      most_bought: "Được mua nhiều nhất"
+    product:
+      bought_now: "Mua ngay"
+    show:
+      not_found: "Không tìm thấy sản phẩm!"
+      product_detail: "Chi tiết sản phẩm"
+      specialty_three_regions: "Đặc sản ba miền"
+      share: "Chia sẻ"
+      detail: "Chi tiết"
+      most_bought: "Được mua nhiều nhất"
+      product_relate: "Sản phẩm liên quan"
+      add_to_cart: "Thêm vào giỏ"
+      reviews: "Bình luận"
+      request_comment1: "Mời bạn "
+      login: "Đăng nhập"
+      request_comment2: " để bình luận"
+      thought: "Để lại suy nghĩ của bạn"

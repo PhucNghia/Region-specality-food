@@ -3,6 +3,8 @@ $('#new-user-modal').modal('show');
 
 $('.error').css('color', 'red');
 $('.error').parent().find('input').css('border', '1px solid red');
+
+$('#alert-notification').html('');
 <% if flash[:danger] %>
   resetAlert();
   $('#alert-notification').addClass('alert-danger');
