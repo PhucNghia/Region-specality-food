@@ -17,7 +17,7 @@ vi:
     link_cart:
       cart: "Giỏ hàng"
     footer:
-      description: "Đây là trang web giới thiệu về những đặc sản của sứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
+      description: "Đây là trang web giới thiệu về những đặc sản của xứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
       create_date: "Tháng 2 năm 2019"
       contact: "LIÊN HỆ"
       address: "Địa chỉ"
@@ -70,9 +70,16 @@ vi:
       total_amount: "Tổng tiền"
     destroy:
       empty_cart: "Giỏ hàng rỗng. Mời bạn đặt mua!"
+    order:
+      order_success: "Đặt hàng thành công"
+    update_info_user:
+      edit_user: "Chỉnh sửa thông tin người mua"
+    info_user:
+      order: "Thanh toán"
+      close: "Đóng"
   static_pages:
     home:
-      viet_specialty: "Đặc sản sứ việt!"
+      viet_specialty: "Đặc sản xứ việt!"
       discovery_north_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN BẮC"
       discovery_central_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN TRUNG"
       discovery_south_specialty: "KHÁM PHÁ ĐẶC SẢN MIỀN NAM"
@@ -85,8 +92,4 @@ vi:
       south_specialty: "Đặc sản miền Nam"
       description_south_specialty: "Sự đa dạng vùng miền cũng góp phần làm cho đặc sản của miền Nam phong phú và đặc biệt không “thua chị kém em”"
       bought_now: "Mua ngay"
-  admin:
-    layouts:
-      header:
-        login: "Đăng nhập"
-        logout: "Đăng xuất"
+

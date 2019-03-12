@@ -70,6 +70,13 @@ en:
       total_amount: "Total amount"
     destroy:
       empty_cart: "Empty cart!"
+    order:
+      order_success: "Order success"
+    update_info_user:
+      edit_user: "Update info buyder"
+    info_user:
+      order: "Order"
+      close: "Close"
   static_pages:
     home:
       viet_specialty: "Vietnam Specialty!"
@@ -85,8 +92,3 @@ en:
       south_specialty: "South specialty"
       description_south_specialty: "The regional diversity also contributes to the richness of the South region's specialties and especially “no less than me”"
       bought_now: "Bought now"
-  admin:
-    layouts:
-      header:
-        login: "Login"
-        logout: "Logout"

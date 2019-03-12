@@ -19,4 +19,8 @@ module BookingCartsHelper
     end
     total
   end
+
+  def set_remote
+    return current_user.nil? ? false : true
+  end
 end

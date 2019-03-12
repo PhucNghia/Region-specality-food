@@ -1,0 +1,15 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+vi:
+  devise:
+    sessions:
+      user:
+        signed_in: "Đăng nhập thành công"
+        signed_out: "Đăng nhập thất bại"
+        already_signed_out: "Tài khoản đã tồn tại"
+      new:
+        login: "Đăng nhập"
+        username_or_email: "Tên đăng nhập hoặc email"
+        password: "Mật khẩu"
+    failure:
+      user:
+        unauthenticated: "Bạn cần phải đăng nhập hoặc đăng ký trước"

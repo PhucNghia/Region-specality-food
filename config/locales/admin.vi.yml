@@ -6,6 +6,21 @@ vi:
     layouts:
       header:
         admin_manage: "Quản lý"
+        slogan1: "Đặc sản "
+        slogan2: "3 miền"
+        logout: "Đăng xuất"
+      aside_left:
+        statisticals: "Thống kê"
+        user_management: "Quản lý người dùng"
+        product_management: "Quản lý sản phẩm"
+        order_management: "Quản lý đơn hàng"
+        order_finish: "Đặt hàng thành công"
+        order_cancel: "Đơn đã hủy"
+      footer:
+        3_regions_specialties: "Đặc sản 3 miền"
+    statisticals:
+      index:
+        access_statistics: "Thống kê truy cập"
     users:
       form:
         close: "Đóng"
@@ -35,3 +50,49 @@ vi:
         destroy_failed: "Xóa thất bại"
       show:
         detail_infor: "Thông tin chi tiết"
+    products:
+      form:
+        close: "Đóng"
+        edit: "Cập nhật"
+        new: "Tạo mới"
+        update: "Cập nhật"
+        create: "Tạo mới"
+      index:
+        new: "Thêm mới"
+        product_list: "Danh sách sản phẩm"
+        code: "Mã"
+        name: "Tên sản phẩm"
+        price: "Giá"
+        status: "Trạng thái"
+        region: "Khu vực"
+        option: "Tùy chọn"
+        show: "Xem"
+        edit: "Chỉnh sửa"
+        del: "Xóa"
+      edit:
+        edit_product: "Chỉnh sửa sản phẩm"
+      new:
+        new_product: "Thêm mới sản phẩm"
+      create:
+        create_success: "Tạo mới thành công"
+        create_failed: "Tạo mới thất bại"
+      update:
+        update_success: "Cập nhật thành công"
+        update_failed: "Cập nhật thất bại"
+      destroy:
+        destroy_success: "Xóa thành công"
+        destroy_failed: "Xóa thất bại"
+      show:
+        product_detail: "Chi tiết sản phẩm"
+    orders:
+      index:
+        order_list: "Danh sách đặt hàng"
+        code: "Mã đơn hàng"
+        user_name: "Họ tên"
+        phone: "Số điện thoại"
+        product_name: "Tên sản phẩm"
+        quantity: "Số lượng"
+        unit_price: "Đơn giá"
+        amount: "Thành tiền"
+        date: "Ngày tháng"
+        option: "Tùy chọn"
