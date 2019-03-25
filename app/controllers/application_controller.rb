@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :init_gon
   protect_from_forgery with: :exception
 
   protected
@@ -18,5 +19,9 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = session[:language] || I18n.default_locale
+  end
+
+  def init_gon
+    gon.comment_ids = ""
   end
 end

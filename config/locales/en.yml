@@ -6,6 +6,21 @@ en:
         delimiter: ","
         precision: 2
         format: "%u%n"
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: "Just now"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      x_days: 
+        one: "1 day"
+        other: "%{count} days"
+      about_x_hours: 
+        one: "1 hour"
+        other: "%{count} hours"
+      about_x_years:
+        one: "1 year"
+        other: "%{count} years"
   layouts:
     header:
       product: "PRODUCT"
@@ -24,31 +39,6 @@ en:
       address_detail: "CNTT1 - K10, Hanoi University of Industry"
       phone: "Phone"
       students_make: "STUDENTS MAKE"
-  products:
-    index:
-      product_list: "Product list"
-      specialty_three_regions: "Specialty three regions"
-      product: "Product"
-      order: "Order"
-      order_by_price: "Order by price"
-      order_by_name: "Order by name"
-      search: "Search"
-      region: "Region"
-      north: "North"
-      central: "Central"
-      south: "South"
-      most_bought: "Most bought"
-    product:
-      by_now: "Bought now"
-    show:
-      not_found: "Not found product!"
-      product_detail: "Product detail"
-      specialty_three_regions: "Specialty three regions"
-      detail: "Detail"
-      share: "Share"
-      most_bought: "Most bought"
-      product_relate: "Product relate"
-      add_to_cart: "Add to cart"
   booking_carts:
     index:
       empty_cart: "Empty cart!"

@@ -1,0 +1,31 @@
+en:
+  products:
+    index:
+      product_list: "Product list"
+      specialty_three_regions: "Specialty three regions"
+      product: "Product"
+      order: "Order"
+      order_by_price: "Order by price"
+      order_by_name: "Order by name"
+      search: "Search"
+      region: "Region"
+      north: "North"
+      central: "Central"
+      south: "South"
+      most_bought: "Most bought"
+    product:
+      by_now: "Bought now"
+    show:
+      not_found: "Not found product!"
+      product_detail: "Product detail"
+      specialty_three_regions: "Specialty three regions"
+      detail: "Detail"
+      share: "Share"
+      most_bought: "Most bought"
+      product_relate: "Product relate"
+      add_to_cart: "Add to cart"
+      reviews: "Reviews"
+      request_comment1: "Please "
+      login: "Sign in"
+      request_comment2: " to write the comment"
+      thought: "Leave your thought"

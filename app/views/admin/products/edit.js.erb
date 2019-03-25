@@ -4,6 +4,8 @@ $('.modal-title').html('<%= j t ".edit_product" %>');
 
 $('.error').css('color', 'red');
 $('.error').parent().find('input').css('border', '1px solid red');
+
+$('#alert-notification').html('');
 <% if flash[:danger] %>
   $('#alert-notification').addClass('alert-danger');
   $('#alert-notification').append('<%= j flash[:danger] %>');

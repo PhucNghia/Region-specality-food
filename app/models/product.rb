@@ -3,7 +3,8 @@ class Product < ApplicationRecord
   belongs_to :region
   belongs_to :category
   belongs_to :provider
-  has_many :cetification
+  has_many :cetifications
+  has_many :comments
 
   attr_accessor :amount
   attr_accessor :quantity
@@ -12,4 +13,6 @@ class Product < ApplicationRecord
 
   scope :by_region_product, -> id {where region_id: id}
   scope :by_product_id, -> id {where id: id}
+
+  accepts_nested_attributes_for :comments, allow_destroy: true
 end

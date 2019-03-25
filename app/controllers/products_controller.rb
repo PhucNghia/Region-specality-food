@@ -6,6 +6,14 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @product.comments.without_parent.infor_comment.created_desc
+
+    user_ids = @product.comments.pluck(:user_id).uniq
+    @mention_usernames = User.by_id(user_ids).pluck(:name).join(',')
+
+    gon.comment_ids = @product.comments.pluck(:id)
+    gon.mention_usernames = @mention_usernames
   end
 
   private

@@ -1,0 +1,27 @@
+<li class="comment">
+  <div class="comment-wrap">
+    <div class="comment-img">
+      <img alt='' src='http://placehold.it/100x100' height='80' width='80' />
+      </div>
+    <article class="comment-block">
+      <header class="comment-header">
+        <cite class="comment-author">
+          <h4><%= comment.user.name %></h4>
+        </cite>
+      </header>
+      <div class="comment-content-<%= comment.id %>">
+        <p><%= comment.content %></p>
+      </div>
+      <span class="comment-reply">
+        <% if user_signed_in? && check_user_comment(comment.user.id) %>
+          <%= link_to t(".edit"), edit_product_comment_path(@product, comment.id), remote: true, class: "comment-reply-link" %> - 
+          <%= link_to t(".delete"), "javascript:;", class: "remove-comment", data: {product_id: @product.id, comment_id: comment.id} %> - 
+        <% elsif user_signed_in? %>
+          <%= link_to t(".reply"), "javascript:;", class: "reply-comment", class: "reply-comment", data: {parent_id: comment.id} %> - 
+        <% end %>
+        <%= distance_of_time_in_words(Time.now - comment.created_at) %>
+      </span>
+    </article>
+  </div>
+  <%= render partial: "comments/replies", collection: replies(comment), as: :reply, locals: {parent_id: comment.id} %>
+</li>

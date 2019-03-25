@@ -1,9 +1,4 @@
-$('#new-product-modal').html('<%= j render "form", type: :post %>');
-$('#new-product-modal').modal('show');
-$('.modal-title').html('<%= j t ".new_product" %>');
-
-$('.error').css('color', 'red');
-$('.error').parent().find('input').css('border', '1px solid red');
+$('#comment-form').html('<%= j render "comments/form", comment: @comment, url: product_comment_path(@product, @comment) %>')
 
 $('#alert-notification').html('');
 <% if flash[:danger] %>

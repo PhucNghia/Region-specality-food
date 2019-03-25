@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root "static_pages#home"
   post "languages/set_language", to: "languages#set_language"
   devise_for :users
-  resources :products
+  resources :products do
+    resources :comments
+  end
   resources :booking_carts
   resources :users
   get "update_info_user", to: "booking_carts#update_info_user"
