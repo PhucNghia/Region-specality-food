@@ -1,0 +1,75 @@
+<div class="form-group">
+  <%= f.label :name %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+      <%= f.text_field :name, class: "form-control", placeholder: "Nhập tên..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :email %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+      <%= f.text_field :email, class: "form-control", placeholder: "Nhập email..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :username %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+      <%= f.text_field :username, class: "form-control", placeholder: "Nhập username..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :birthday %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+      <%= f.date_field :birthday, class: "form-control", placeholder: "Nhập ngày sinh..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :address %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+      <%= f.text_field :address, class: "form-control", placeholder: "Nhập địa chỉ..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :phone %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+      <%= f.text_field :phone, class: "form-control", placeholder: "Nhập số điện thoại..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :password %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+      <%= f.password_field :password, class: "form-control", placeholder: "Nhập mật khẩu..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :password_confirmation %>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+      <%= f.text_field :password_confirmation, class: "form-control", placeholder: "Xác nhận mật khẩu..." %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.submit action_name == "new" ? t(".sign_up") : t(".update"), class: "btn btn-success login-button btn-lg btn-block", id: "btn-register" %>
+</div>

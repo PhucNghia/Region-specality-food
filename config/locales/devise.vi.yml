@@ -13,3 +13,12 @@ vi:
     failure:
       user:
         unauthenticated: "Bạn cần phải đăng nhập hoặc đăng ký trước"
+        invalid: "Bạn đã nhập sai tên đăng nhập hoặc mật khẩu"
+    registrations:
+      new:
+        sign_up: "Đăng ký"
+      edit:
+        edit: "Chỉnh sửa"
+      form:
+        sign_up: "Đăng ký"
+        update: "Cập nhật"

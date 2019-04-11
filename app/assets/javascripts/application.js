@@ -56,3 +56,11 @@
 //= require template/extensions/revolution.extension.navigation.min.js
 //= require template/extensions/revolution.extension.migration.min.js
 //= require template/extensions/revolution.extension.parallax.min.js
+
+//= require template/login/animsition.min.js
+//= require template/login/popper.min.js
+//= require template/login/select2.min.js
+//= require template/login/moment.min.js
+//= require template/login/daterangepicker.js
+//= require template/login/countdowntime.js
+//= require template/login/mainlogin.js
