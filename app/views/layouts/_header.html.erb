@@ -38,7 +38,7 @@
               </li>
               <% if user_signed_in? %>
                 <li class="text-center sub-menu">
-                  <a href="#"><%= current_user.name %></a>
+                  <a href="javascript:;"><%= current_user.name %></a>
                   <ul class="text-left">
                     <li>
                       <%= link_to edit_user_registration_path do %>
