@@ -64,9 +64,11 @@
           </nav>
           <nav class="pull-right noo-main-menu">
             <ul class="nav-collapse navbar-nav">
-              <li class="menu-item-has-children current-menu-item">
-                <%= link_to t(".product"), products_path %>
-              </li>
+              <% if can? :index, Product %>
+                <li class="menu-item-has-children current-menu-item">
+                  <%= link_to t(".product"), products_path %>
+                </li>
+              <% end %>
               <li>
                 <a href="#"><%= t ".contact" %></a>
               </li>
