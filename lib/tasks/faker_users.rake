@@ -4,7 +4,7 @@ namespace :db do
     User.create!(
       email: "admin@gmail.com",
       name: "Ngọc Nghĩa", #FFaker::NameVN.name,
-      password: "123456",
+      password: "ngocnghia97",
       username: "admin",
       birthday: "23/08/1997",
       gender: 1,
@@ -19,7 +19,7 @@ namespace :db do
       User.create!(
         email: FFaker::Internet.email,
         name: FFaker::NameVN.name,
-        password: "123456",
+        password: "ngocnghia97",
         username: "username-#{n+1}",
         birthday: "23/08/1997",
         gender: gender,

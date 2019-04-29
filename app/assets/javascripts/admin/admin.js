@@ -6,6 +6,7 @@
 //= require alert
 //= require admin/user
 //= require admin/product
+//= require admin/orders
 //= require sweetalert/sweetalert.min.js
 //= require i18n
 //= require i18n.js
@@ -22,4 +23,3 @@
 //= require admin/template/zabuto_calendar.js
 // require admin/template/bootstrap-fileupload.js
 //= require admin/statisticals.js
-
