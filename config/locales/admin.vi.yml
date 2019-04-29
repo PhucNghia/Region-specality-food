@@ -1,5 +1,6 @@
 vi:
   confirm_destroy: "Bạn có muốn xóa không?"
+  confirm_change: "Bạn có muốn thay đổi không?"
   ok: "Đồng ý"
   cancel: "Hủy"
   admin:
@@ -90,9 +91,25 @@ vi:
         code: "Mã đơn hàng"
         user_name: "Họ tên"
         phone: "Số điện thoại"
+        address: "Địa chỉ"
+        status: "Trạng thái"
+        date: "Ngày tháng"
+        option: "Tùy chọn"
+      update:
+        update_success: "Cập nhật trạng thái thành công"
+      order:
+        show: "Chi tiết"
+    order_details:
+      index:
+        order_detail: "Chi tiết hóa đơn"
+        full_name: "Họ tên"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
+        total_quantity: "Tổng số lượng"
+        total_amount: "Tổng tiền"
+        code: "Mã sản phẩm"
         product_name: "Tên sản phẩm"
         quantity: "Số lượng"
         unit_price: "Đơn giá"
         amount: "Thành tiền"
-        date: "Ngày tháng"
-        option: "Tùy chọn"
+        cancel: "Thoát"

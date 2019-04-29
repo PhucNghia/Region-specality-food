@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :statisticals
     resources :users
     resources :products
-    resources :orders
+    resources :orders, only: [:index, :update] do
+      resources :order_details, only: [:index]
+    end
   end
 end

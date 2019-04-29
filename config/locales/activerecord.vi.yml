@@ -25,6 +25,12 @@ vi:
         region_id: "Khu vực"
         category_id: "Thể loại"
         provider_id: "Nhà cung cấp"
+      order:
+        status_list:
+          inprogress: "Đang xử lý"
+          indelivery: "Đang giao hàng"
+          success: "Đã giao hàng"
+          cancel: "Hủy bỏ"
     errors:
       models:
         user:

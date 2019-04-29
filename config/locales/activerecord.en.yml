@@ -25,6 +25,12 @@ en:
         region_id: "Region"
         category_id: "Category"
         provider_id: "Provider"
+      order:
+        status_list:
+          inprogress: "Inprogress"
+          indelivery: "Indelivery"
+          success: "Delivered"
+          cancel: "Cancel"
     errors:
       models:
         user:

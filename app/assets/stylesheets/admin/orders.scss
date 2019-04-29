@@ -1,3 +1,12 @@
 // Place all the styles related to the admin/orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#order-list tr td {
+  line-height: 35px !important;
+}
+
+#order_status {
+  width: 80%;
+  margin-left: 10%;
+}
