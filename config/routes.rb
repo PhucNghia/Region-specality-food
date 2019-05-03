@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   resources :users
   get "update_info_user", to: "booking_carts#update_info_user"
   post "order", to: "booking_carts#order"
-
+  resources :orders, only: [:index, :update] do
+    resources :order_details, only: [:index]
+  end
+  resources :order_details, only: [:update]
+  
   namespace :admin do
     root "statisticals#index"
     resources :statisticals

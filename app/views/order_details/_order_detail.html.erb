@@ -1,0 +1,26 @@
+<tr>
+  <td class="text-center product-id"><a href="javascript:;">#<%= order_detail.product.id %></a></td>
+  <td class="col-md-2 text-center">
+    <%= link_to product_path(order_detail.product.id) do %>
+      <%= image_tag order_detail.product.image, style: "width: 60px; height: 60px;" %>
+    <% end %>
+  </td>
+  <td><%= order_detail.product.name %></td>
+  <td class="text-center"><%= order_detail.quantity %></td>
+  <td class="text-center"><%= format_money order_detail.product.price %></td>
+  <td class="text-center"><%= format_money order_detail.sale_price %></td>
+  <td class="text-center">
+    <p class="capsule capsule-<%= order_detail.status %>">
+      <%= t "activerecord.attributes.order.status_list.#{order_detail.status}" %>
+    </p>
+  </td>
+  <% if check_option @order_details %>
+    <td class="col-md-1 text-center">
+      <% if order_detail.status == "inprogress" %>
+        <%= link_to "javascript:;", class: "remove cancel-product", data: {order_detail_id: order_detail.id, order_id: @order.id} do %>
+          <b><%= t ".cancel" %></b>
+        <% end %>
+      <% end %>
+    </td>
+  <% end %>
+</tr>

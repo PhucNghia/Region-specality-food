@@ -5,8 +5,12 @@ module Admin
     def index
       @order_details = @order.OrderDetails.all
       @order_user = User.find_by id: @order.user_id
-      @total_quantity = @order_details.pluck(:quantity).inject{|sum, quantity| sum += quantity}
-      @total_sale_price = @order_details.pluck(:sale_price).inject{|sum, sale_price| sum += sale_price}
+      sum = 0
+      @order_details.each{|item| sum += item.quantity unless item.status == "cancel"}
+      @total_quantity = sum
+      sum = 0
+      @order_details.each{|item| sum += item.sale_price unless item.status == "cancel"}
+      @total_sale_price = sum
     end
 
     private

@@ -1,0 +1,33 @@
+<section class="noo-page-heading eff" style="height: 200px;">
+  <div class="container">
+    <div class="noo-heading-content">
+      <h1 class="page-title eff"><%= t ".my_order" %></h1>
+      <div class="noo-page-breadcrumb eff">
+        <a href="index.html" class="home"><%= t ".specialty_three_regions" %></a>/<span><%= t ".my_order" %></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="commerce commerce-page commerce-cart noo-shop-main">
+  <div class="container">
+    <div class="row">
+      <div class="noo-main col-md-12">
+        <table class="shop_table cart">
+          <thead>
+            <tr class="text-center">
+              <th class="text-center"><i class="fa fa-file-code-o"></i> <%= t ".code" %></th>
+              <th class="text-center"><i class="fa fa-truck"></i> <%= t ".status" %></th>
+              <th class="text-center"><i class="fa fa-calendar"></i> <%= t ".date" %></th>
+              <th class="text-center"><i class="fa fa-edit"></i> <%= t ".show" %></th>
+            </tr>
+          </thead>
+          <tbody id="my-order">
+            <%= render partial: "order", collection: @orders, as: :order %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="order-details" role="dialog"></div>

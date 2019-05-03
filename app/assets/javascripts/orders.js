@@ -1,15 +1,12 @@
 $(document).on('turbolinks:load', function() {
-  var previous;
-  $('.order_status').on('focus', function() {
-    previous = $(this).val();
-  }).change(function() {
-    var order_id = $(this).parents('tr').find('#order-id a').html().substr(1);
-    var status = $(this).val();
-    change_status($(this), previous, order_id, status);
+  $(document).on('click', '.cancel-product', function() {
+    var order_detail_id = $(this).attr('data-order-detail-id');
+    var order_id = $(this).attr('data-order-id')
+    change_status(order_detail_id, order_id);
   });
 });
 
-function change_status(object, previous, order_id, status) {
+function change_status(order_detail_id, order_id) {
   swal({
     title: I18n.t('confirm_change'),
     icon: 'warning',
@@ -17,21 +14,21 @@ function change_status(object, previous, order_id, status) {
       cancel: {
         text: I18n.t('cancel'),
         value: null,
-        visible: true,
+        visible: true
       },
       confirm: {
         text: I18n.t('ok'),
         value: true,
-        visible: true,
+        visible: true
       }
     },
   }).then(function (isConfirm) {
     if (isConfirm) {
       $.ajax({
-        url: '/admin/orders/' + order_id,
+        url: '/order_details/' + order_detail_id,
         type: 'patch',
         data: {
-          status: status
+          order_id: order_id
         }
       });
     }

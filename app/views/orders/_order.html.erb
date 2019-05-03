@@ -1,15 +1,13 @@
 <tr>
   <td class="text-center order-id" id="order-id"><a href="javascript:;">#<%= order.id %></a></td>
-  <td><%= order.user.name %></td>
-  <td class="text-center"><%= order.user.phone %></td>
-  <td class="text-center"><%= order.user.address %></td>
   <td class="text-center">
-    <%= select_tag "order_status", options_for_select(list_order_status(order.status), selected_order_status(order.status)),
+    <p class="capsule capsule-<%= order.status %>"><%= t "activerecord.attributes.order.status_list.#{order.status}" %></p>
+    <%#= select_tag "order_status", options_for_select(list_order_status(order.status), selected_order_status(order.status)),
       class: "form-control order_status", disabled: disable_order_status(order.status) %>
   </td>
   <td class="text-center"><%= order.order_date.strftime("%B %e, %Y at %I:%M %p") %></td>
   <td class="text-center">
-    <%= link_to admin_order_order_details_path(order.id), remote: true, title: t(".show"), class: "btn btn-success btn-xs" do %>
+    <%= link_to order_order_details_path(order.id), remote: true, title: t(".show"), class: "btn btn-success btn-xs" do %>
       <i class="fa fa-info-circle"></i>
     <% end %>
   </td>

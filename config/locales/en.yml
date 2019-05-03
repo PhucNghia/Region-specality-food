@@ -27,6 +27,7 @@ en:
       contact: "CONTACT"
       admin_manage: "Manager"
       edit: "Edit"
+      my_order: "My order"
       login: "Login"
       logout: "Logout"
     link_cart:
@@ -67,6 +68,36 @@ en:
     info_user:
       order: "Order"
       close: "Close"
+  orders:
+    index:
+      my_order: "My order"
+      specialty_three_regions: "Specailty three regions"
+      code: "order code"
+      status: "Status"
+      date: "Order date"
+      show: "Detail"
+    order:
+      show: "Detail"
+  order_details:
+    index:
+      order_detail: "Order detail"
+      receiver_name: "Receiver name"
+      phone: "Phone"
+      receiver_address: "Receiver address"
+      total_quantity: "Total quantity"
+      total_amount: "Total amount"
+      code: "Product code"
+      image: "Image"
+      product_name: "Product name"
+      quantity: "Quantity"
+      unit_price: "Unit price"
+      amount: "Amount"
+      status: "Status"
+      option: "Option"
+      cancel: "Cancel"
+      quit: "Cancel"
+    update:
+      update_success: "Update success"
   static_pages:
     home:
       viet_specialty: "Vietnam Specialty!"

@@ -1,0 +1,24 @@
+// $(document).ready(function(){
+//   $('#order-list').html('<%#= j render partial: "order", collection: @orders, as: :order %>');
+//   var previous;
+//   $('.order_status').on('focus', function() {
+//     previous = $(this).val();
+//   }).change(function() {
+//     var order_id = $(this).parents('tr').find('#order-id').html();
+//     var status = $(this).val();
+//     change_status($(this), previous, order_id, status);
+//   });
+
+//   $('#alert-notification').html('');
+//   <%# if flash[:danger] %>
+//     $('#alert-notification').addClass('alert-danger');
+//     $('#alert-notification').append('<%#= j flash[:danger] %>');
+//     $('#alert-notification').show();
+//     $('#alert-notification').fadeOut(7000);
+//   <%# elsif flash[:success] %>
+//     $('#alert-notification').addClass('alert-success');
+//     $('#alert-notification').append('<%#= j flash[:success] %>');
+//     $('#alert-notification').show();
+//     $('#alert-notification').fadeOut(7000);
+//   <%# end %>
+// });

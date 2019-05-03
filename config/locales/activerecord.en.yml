@@ -30,7 +30,7 @@ en:
           inprogress: "Inprogress"
           indelivery: "Indelivery"
           success: "Delivered"
-          cancel: "Cancel"
+          cancel: "Canceled"
     errors:
       models:
         user:

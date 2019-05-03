@@ -1,13 +1,6 @@
 $(document).ready(function(){
-  $('#order-list').html('<%= j render partial: "order", collection: @orders, as: :order %>');
-  var previous;
-  $('.order_status').on('focus', function() {
-    previous = $(this).val();
-  }).change(function() {
-    var order_id = $(this).parents('tr').find('#order-id a').html().substr(1);;
-    var status = $(this).val();
-    change_status($(this), previous, order_id, status);
-  });
+  $('#order-details').modal('hide')
+  $('#my-order').html('<%= j render partial: "orders/order", collection: @orders, as: :order %>');
 
   $('#alert-notification').html('');
   <% if flash[:danger] %>
