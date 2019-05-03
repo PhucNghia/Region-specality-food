@@ -30,7 +30,7 @@ vi:
           inprogress: "Đang xử lý"
           indelivery: "Đang giao hàng"
           success: "Đã giao hàng"
-          cancel: "Hủy bỏ"
+          cancel: "Đã hủy"
     errors:
       models:
         user:

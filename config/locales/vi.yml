@@ -19,6 +19,7 @@ vi:
       contact: "LIÊN HỆ"
       admin_manage: "Quản lý"
       edit: "Chỉnh sửa"
+      my_order: "Đơn hàng"
       login: "Đăng nhập"
       logout: "Đăng xuất"
     link_cart:
@@ -59,6 +60,36 @@ vi:
     info_user:
       order: "Thanh toán"
       close: "Đóng"
+  orders:
+    index:
+      my_order: "Đơn hàng của tôi"
+      specialty_three_regions: "Đặc sản ba miền"
+      code: "Mã đơn hàng"
+      status: "Trạng thái"
+      date: "Ngày đặt"
+      show: "Chi tiết"
+    order:
+      show: "Chi tiết"
+  order_details:
+    index:
+      order_detail: Chi tiết hóa đơn
+      receiver_name: Người nhận
+      phone: Số điện thoại
+      receiver_address: Địa chỉ người nhận
+      total_quantity: Tổng số lượng
+      total_amount: Tổng tiền
+      code: "Mã sản phẩm"
+      image: "Hình ảnh"
+      product_name: "Tên sản phẩm"
+      quantity: "Số lượng"
+      unit_price: "Đơn giá"
+      amount: "Thành tiền"
+      status: "Trạng thái"
+      option: "Tùy chọn"
+      cancel: "Hủy bỏ"
+      quit: "Thoát"
+    update:
+      update_success: "Cập nhật thành công"
   static_pages:
     home:
       viet_specialty: "Đặc sản xứ việt!"

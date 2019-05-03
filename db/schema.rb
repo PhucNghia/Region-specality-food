@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20190301035536) do
     t.integer "product_id"
     t.integer "quantity"
     t.float "sale_price", limit: 24
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
