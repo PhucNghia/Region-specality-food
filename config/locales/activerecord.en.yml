@@ -2,6 +2,7 @@ en:
   errors:
     messages:
       not_saved: "Error"
+      extension_whitelist_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
   activerecord:
     attributes:
       user:
@@ -21,10 +22,12 @@ en:
         price: "Price"
         discount: "Discount"
         status: "Status"
-        quantity: "Quantity"
+        quantities: "Quantity"
         region_id: "Region"
         category_id: "Category"
         provider_id: "Provider"
+      description:
+        content: "Content"
       order:
         status_list:
           inprogress: "Inprogress"
@@ -53,15 +56,25 @@ en:
               blank: "Not blank"
             name:
               blank: "Not blank"
+            image:
+              blank: "Not blank"
             price:
               blank: "Not blank"
+              inclusion: "Inclusion 1.000 to 999.999.999"
             status:
               blank: "Not blank"
-            quantity:
+            discount:
+              inclusion: "Inclusion 0 to 100"
+            quantities:
               blank: "Not blank"
+              inclusion: "Inclusion 1 to 999.999.999"
             region_id:
               blank: "Not blank"
             category_id:
               blank: "Not blank"
             provider_id:
+              blank: "Not blank"
+        description:
+          attributes:
+            content:
               blank: "Not blank"

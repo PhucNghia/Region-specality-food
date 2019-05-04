@@ -60,6 +60,8 @@ en:
         new: "Create"
         update: "Update"
         create: "Create"
+        stocking: "Stocking"
+        out_of_stock: "Out of stock"
       index:
         new: "New"
         product_list: "Product list"
@@ -68,6 +70,8 @@ en:
         name: "Product name"
         price: "Price"
         status: "Status"
+        stocking: "Stocking"
+        out_of_stock: "Out of stock"
         region: "Region"
         option: "Option"
         show: "Show"

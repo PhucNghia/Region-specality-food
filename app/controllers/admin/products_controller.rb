@@ -11,21 +11,22 @@ module Admin
 
     def new
       @product = Product.new
+      @product.build_description
       respond_to do |format|
         format.js
       end
     end
 
     def create
-      params[:product][:image] = "product/" + params[:product][:image].original_filename
       @product = Product.new product_params
       if @product.save
         flash[:success] = t ".create_success"
         redirect_to admin_products_path
       else
-        flash.now[:danger] = t ".create_failed"
+        flash[:danger] = t ".create_failed"
         respond_to do |format|
           format.js {render :new}
+          format.html {redirect_back fallback_location: new_admin_product_path}
         end
       end
     end
@@ -33,9 +34,7 @@ module Admin
     def edit; end
 
     def update
-      if params[:product][:image] != @product.image
-        params[:product][:image] = "product/" + params[:product][:image].original_filename
-      end
+      params[:product].except(:image) if params[:product][:image].nil?
       if @product.update_attributes product_params
         flash[:success] = t ".update_success"
         redirect_to admin_products_path
@@ -68,7 +67,7 @@ module Admin
 
     def product_params
       params.require(:product).permit :title, :name, :image, :price, :discount, :status,
-        :quantities, :region_id, :category_id, :provider_id
+        :quantities, :region_id, :category_id, :provider_id, description_attributes: :content
     end
   end
 end

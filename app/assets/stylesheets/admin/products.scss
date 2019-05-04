@@ -1,3 +1,24 @@
 .product-list tr td {
   line-height: 50px !important;
 }
+
+#product_description_attributes_content {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+.product_image label {
+  margin-left: -450px;
+}
+
+.product_image span {
+  margin-left: -380px;
+}
+
+#product_price, .product_price label, 
+#product_status, .product_status label,
+.select_region #product_region_id, .product_region_id label {
+  margin-left: -10px;
+}

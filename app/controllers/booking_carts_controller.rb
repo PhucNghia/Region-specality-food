@@ -14,7 +14,10 @@ class BookingCartsController < ApplicationController
       @product.quantity = params[:quantity].to_i
       session[:cart] << @product
     end
-    redirect_to booking_carts_path
+    flash.now[:success] = t ".create_success"
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update

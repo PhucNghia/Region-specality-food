@@ -2,6 +2,7 @@ vi:
   errors:
     messages:
       not_saved: "Xin hãy kiểm tra lại lỗi"
+      extension_whitelist_error: "Vi You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
   activerecord:
     attributes:
       user:
@@ -21,10 +22,12 @@ vi:
         price: "Giá hiện tại"
         discount: "Giảm giá"
         status: "Trạng thái"
-        quantity: "Số lượng"
+        quantities: "Số lượng"
         region_id: "Khu vực"
         category_id: "Thể loại"
         provider_id: "Nhà cung cấp"
+      description:
+        content: "Nội dung"
       order:
         status_list:
           inprogress: "Đang xử lý"
@@ -53,15 +56,25 @@ vi:
               blank: "Không được để trống"
             name:
               blank: "Không được để trống"
+            image:
+              blank: "Không được để trống"
             price:
               blank: "Không được để trống"
+              inclusion: "Trong khoảng 1.000 đến 999.999.999"
             status:
               blank: "Không được để trống"
-            quantity:
+            discount:
+              inclusion: "Trong khoảng 0 đến 100"
+            quantities:
               blank: "Không được để trống"
+              inclusion: "Trong khoảng 1 đến 999.999.999"
             region_id:
               blank: "Không được để trống"
             category_id:
               blank: "Không được để trống"
             provider_id:
+              blank: "Không được để trống"
+        description:
+          attributes:
+            content:
               blank: "Không được để trống"

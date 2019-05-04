@@ -56,6 +56,8 @@ en:
       confirm: "Confirm"
       total_cart: "Total cart"
       order: "Order"
+    create:
+      create_success: "Add success"
     total_cart:
       total_quantity: "Total quantity"
       total_amount: "Total amount"

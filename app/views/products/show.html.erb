@@ -28,10 +28,9 @@
                 <div class="product_meta">
                   <span class="posted_in">Vị trí: <%= @product.region.name %></span>
                 </div>
-                <%= form_tag "/booking_carts", method: :post, class: "cart" do %>
+                <%= form_tag "/booking_carts", method: :post, remote: true, class: "cart" do %>
                   <div class="quantity">
-                    <%= hidden_field_tag "id", @product.id %>
-                    <%= number_field_tag "quantity", set_number_product(@product), min: 1, class: "text-center" %>
+                    <%= render "quantity" %>
                   </div>
                   <%= submit_tag t(".add_to_cart"), class: "single_add_to_cart_button button" %>
                 <% end %>
@@ -70,11 +69,12 @@
               <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade in active">
                   <p><%= @product.description.content %></p>
+                  <p>Thành phần: <%= @product.description.ingredient %></p>
                 </div>
                 <div id="tab-2" class="tab-pane fade">
                   <div id="comment-content">
                     <div id="comments" class="comments-area">
-                      <h2 class="comments-title"><%= count_comment @product %> <%= t ".reviews" %></h2>
+                      <h2 class="comments-title col-md-1 text-center"><%= count_comment @product %></h2><h2 class="col-md-11"><%= t ".reviews" %></h2>
                       <ol class="comments-list">
                         <%= render partial: "comments/comment", collection: @comments, as: :comment %>
                       </ol>

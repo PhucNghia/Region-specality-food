@@ -29,6 +29,7 @@ gem "simple_form"
 gem "i18n-js"
 gem "gon"
 gem "config"
+gem "carrierwave"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
