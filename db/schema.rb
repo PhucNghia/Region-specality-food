@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20190301035536) do
     t.string "image"
     t.float "price", limit: 24
     t.float "discount", limit: 24
-    t.string "status"
+    t.integer "status", default: 1
     t.integer "quantities"
     t.integer "region_id"
     t.integer "category_id"

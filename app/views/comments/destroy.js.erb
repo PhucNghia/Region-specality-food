@@ -1,4 +1,4 @@
-$('.comments-title').html('<%= j count_comment(@product).to_s %> Comments');
+$('.comments-title').html('<%= j count_comment(@product).to_s %>');
 $('.comments-list').html('<%= j render partial: "comments/comment", collection: @comments, as: :comment %>');
 
 // Mention user

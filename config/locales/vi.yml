@@ -48,6 +48,8 @@ vi:
       confirm: "Xác nhận"
       total_cart: "Tổng giỏ hàng"
       order: "Đặt hàng"
+    create:
+      create_success: "Thêm thành công"
     total_cart:
       total_quantity: "Tổng số lượng"
       total_amount: "Tổng tiền"
