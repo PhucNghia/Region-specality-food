@@ -12,12 +12,24 @@
       <li><span>200</span></li>
       <li><span>0</span></li>
     </ul>
-    <% (1..5).each do |index| %>
+    <%
+=begin%>
+ <% (1..5).each do |index| %>
       <div class="bar">
         <div class="title">0<%= index + 2%>/03/2019</div>
         <div class="value tooltips" data-original-title=<%= 180*index %> data-toggle="tooltip" data-placement="top"><%= (index*50).to_s %></div>
       </div>
+    <% end %> 
+<%
+=end%>
+
+    <% @statisticals.each do |statistical| %>
+      <div class="bar">
+        <div class="title"><%= statistical.created_at.strftime("%d/%m/%Y") %></div>
+        <div class="value tooltips" data-original-title=<%= statistical.quantity %> data-toggle="tooltip" data-placement="top"><%= statistical.quantity/3.4 %></div>
+      </div>
     <% end %>
+
   </div>
 </div>
 <div class="col-lg-3 ds">

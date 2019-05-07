@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :init_gon
+  before_action :load_statistical
   protect_from_forgery with: :exception
 
   protected
@@ -23,5 +24,13 @@ class ApplicationController < ActionController::Base
 
   def init_gon
     gon.comment_ids = ""
+  end
+
+  def load_statistical
+    if session[:statistical].nil?
+      session[:statistical] = true
+    elsif session[:statistical]
+      session[:statistical] = false
+    end
   end
 end

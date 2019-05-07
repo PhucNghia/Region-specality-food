@@ -13,10 +13,11 @@ Rails.application.routes.draw do
     resources :order_details, only: [:index]
   end
   resources :order_details, only: [:update]
+  resources :statisticals, only: [:create]
   
   namespace :admin do
     root "statisticals#index"
-    resources :statisticals
+    resources :statisticals, only: [:index]
     resources :users
     resources :products
     resources :orders, only: [:index, :update] do
