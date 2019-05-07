@@ -2,7 +2,14 @@ $('.quantity').html('<%= j render "products/quantity" %>');
 $('.link_cart').html('<%= j render "layouts/link_cart" %>');
 
 $('#alert-notification').html('');
-$('#alert-notification').addClass('alert-success');
-$('#alert-notification').append('<%= j flash[:success] %>');
-$('#alert-notification').show();
-$('#alert-notification').fadeOut(7000);
+<% if flash[:danger] %>
+  $('#alert-notification').addClass('alert-danger');
+  $('#alert-notification').append('<%= j flash[:danger] %>');
+  $('#alert-notification').show();
+  $('#alert-notification').fadeOut(7000);
+<% elsif flash[:success] %>
+  $('#alert-notification').addClass('alert-success');
+  $('#alert-notification').append('<%= j flash[:success] %>');
+  $('#alert-notification').show();
+  $('#alert-notification').fadeOut(7000);
+<% end %>

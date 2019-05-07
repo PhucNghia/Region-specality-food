@@ -35,7 +35,11 @@
             <% end %>
           </td>
           <td class="hidden-phone text-center"><%= format_money product.price %></td>
-          <td class="text-center"><%= t ".#{product.status}" %></td>
+          <td class="text-center">
+            <p class="capsule-product capsule-<%= product.status %>">
+              <%= t ".#{product.status}" %>
+            </p>
+          </td>
           <td class="text-center"><%= product.region.name %></td>
           <td class="text-center">
             <%= link_to admin_product_path(product.id), remote: true, title: t(".show"), class: "btn btn-success btn-xs" do %>

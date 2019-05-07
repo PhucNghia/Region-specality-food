@@ -9,13 +9,16 @@
         <h3 class="text-center"><%= t ".order_detail" %></h3>
         <div class="col-md-8">
           <div class="col-md-12">
-            <%= t ".full_name" %>: <b><%= @order_user.name %></b>
+            <%= t ".receiver_name" %>: <b><%= @order.receiver_name %></b>
           </div>
           <div class="col-md-12">
-            <%= t ".phone" %>: <b><%= @order_user.phone %></b>
+            <%= t ".phone" %>: <b><%= @order.phone %></b>
           </div>
           <div class="col-md-12">
-            <%= t ".address" %>: <b><%= @order_user.address %></b>
+            <%= t ".email" %>: <b><%= @order.email %></b>
+          </div>
+          <div class="col-md-12">
+            <%= t ".receiver_address" %>: <b><%= @order.receiver_address %></b>
           </div>
         </div>
         <div class="col-md-4">
@@ -27,7 +30,7 @@
           </div>
         </div>
       </div>
-      <table class="table table-striped table-advance table-hover " style="margin-top: 130px;">
+      <table class="table table-striped table-advance table-hover " style="margin-top: 150px;">
         <thead>
           <tr>
             <th class="text-center col-md-1"><%= t ".code" %></th>

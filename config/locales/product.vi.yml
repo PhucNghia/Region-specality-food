@@ -29,3 +29,5 @@ vi:
       login: "Đăng nhập"
       request_comment2: " để bình luận"
       thought: "Để lại suy nghĩ của bạn"
+      stocking: "Còn hàng"
+      out_of_stock: "Hết hàng"

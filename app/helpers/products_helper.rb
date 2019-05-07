@@ -11,4 +11,8 @@ module ProductsHelper
       end
     end
   end
+
+  def check_disable product
+    product.status == "out_of_stock" ? true : false
+  end
 end

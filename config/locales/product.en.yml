@@ -29,3 +29,5 @@ en:
       login: "Sign in"
       request_comment2: " to write the comment"
       thought: "Leave your thought"
+      stocking: "Stocking"
+      out_of_stock: "Out of stock"

@@ -10,6 +10,7 @@ class OrderDetailsController < ApplicationController
     if @order_detail.update_attributes status: "cancel"
       load_order_details
       update_order
+      update_product_quantities
       @orders = Order.by_user_id current_user.id
       flash.now[:success] = t ".update_success"
       respond_to do |format|
@@ -55,5 +56,12 @@ class OrderDetailsController < ApplicationController
     if check == @order_details.length
       @order.update_attributes status: "cancel"
     end
+  end
+
+  def update_product_quantities
+    product = Product.find_by id: @order_detail.product_id
+    new_quantity = product.quantities + @order_detail.quantity
+    product.update_columns quantities: new_quantity, status: new_quantity == 0 ? 0 : 1
+    product.save
   end
 end

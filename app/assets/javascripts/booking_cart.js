@@ -4,6 +4,10 @@ $(document).on('turbolinks:load', function() {
     quantity = $(this).val();
     if(quantity < 1)
       quantity = 1;
+    else if(quantity > 100){
+      alert("Bạn chỉ đặt được tối đa 100 sp");
+      quantity = 100;
+    }
     change_product_quantity(product_id, quantity);
   });
 
