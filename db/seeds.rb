@@ -23,3 +23,5 @@ Rake::Task["db:faker_descriptions"].invoke
 Rake::Task["db:faker_cetifications"].invoke
 Rake::Task["db:faker_comments"].invoke
 Rake::Task["db:faker_rates"].invoke
+
+Rake::Task["db:faker_statisticals"].invoke
