@@ -13,7 +13,7 @@
   <td class="col-md-2 text-center">
     <div class="quantity">
       <%= number_field_tag "product_quantity", product.quantity, id: product.id, class: "input-text qty text product-quantity",
-        size: "4", step: 1, min: 1 %>
+        size: "4", step: 1, min: 1, max: 100 %>
     </div>
   </td>
   <td class="col-md-3 text-center">

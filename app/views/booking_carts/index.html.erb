@@ -42,7 +42,7 @@
                 <%= render "total_cart" %>
               </table>
               <div class="wc-proceed-to-checkout text-center">
-                <%= link_to update_info_user_path, remote: set_remote do %>
+                <%= link_to new_order_path, remote: set_remote do %>
                   <% button_tag t(".order"), type: "button", class: "checkout-button button alt wc-forward" %>
                 <% end %>
                 <%#= form_tag user_path, method: :post do %>

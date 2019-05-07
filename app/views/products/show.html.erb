@@ -32,13 +32,15 @@
                   <div class="quantity">
                     <%= render "quantity" %>
                   </div>
-                  <%= submit_tag t(".add_to_cart"), class: "single_add_to_cart_button button" %>
+                  <%= submit_tag t(".add_to_cart"), class: "single_add_to_cart_button button", disabled: check_disable(@product) %>
                 <% end %>
-                <div class="yith-wcwl-add-to-wishlist">
+                <input class="single_add_to_cart_button button product-<%= @product.status %>" type="reset" style="width: -1px; margin-left: 10px;" value='<%= t ".#{@product.status}" %>' />
+                <!-- <div class="yith-wcwl-add-to-wishlist">
                   <div class="yith-wcwl-add-button">
                     <a href="#" class="add_to_wishlist"></a>
                   </div>
-                </div>
+                </div> -->
+            
                 <div class="clear"></div>
                 <div class="noo-social-share">
                   <span><%= t ".share" %>:</span>

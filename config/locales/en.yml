@@ -58,6 +58,7 @@ en:
       order: "Order"
     create:
       create_success: "Add success"
+      create_failed: "Add failed"
     total_cart:
       total_quantity: "Total quantity"
       total_amount: "Total amount"
@@ -65,6 +66,7 @@ en:
       empty_cart: "Empty cart!"
     order:
       order_success: "Order success"
+      unauthenticated: "You need to sign in before continuing"
     update_info_user:
       edit_user: "Update info buyder"
     info_user:
@@ -80,6 +82,20 @@ en:
       show: "Detail"
     order:
       show: "Detail"
+    form:
+      receiver_info: "Receiver info"
+      receiver_name: "Receiver name..."
+      email: "Email..."
+      phone: "Phone..."
+      receiver_address: "Receiver address..."
+      order: "Order"
+      close: "Close"
+    new:
+      unauthenticated: "You need to sign in before continuing"
+    create:
+      order_success: "Order success"
+      order_failed: "Order failed"
+      not_enough: "%{product} product not enough, please down this product quantity"
   order_details:
     index:
       order_detail: "Order detail"

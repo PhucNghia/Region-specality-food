@@ -66,6 +66,7 @@ module Admin
     end
 
     def product_params
+      params[:product][:status] = 1
       params.require(:product).permit :title, :name, :image, :price, :discount, :status,
         :quantities, :region_id, :category_id, :provider_id, description_attributes: :content
     end

@@ -30,11 +30,11 @@
 
           <div class="col-md-12">
             <div class="form-group col-md-6">
-              <%= f.input :price, class: "form-control", input_html: { min: "1000", max: "999999999"}, placeholder: t("#{product}.price") %>
+              <%= f.input :price, class: "form-control", input_html: { min: "1000", max: "1000000"}, placeholder: t("#{product}.price") %>
             </div>
             <div class="col-md-1"></div>
             <div class="form-group col-md-6">
-              <%= f.input :discount, class: "form-control", input_html: { min: "0", max: "100"}, placeholder: t("#{product}.discount"), min: 1 %>
+              <%= f.input :quantities, class: "form-control", input_html: { min: "1", max: "10000000"}, placeholder: t("#{product}.quantities"), min: 1 %>              
             </div>
           </div>
 
@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-1"></div>
             <div class="form-group col-md-6">
-              <%= f.input :quantities, class: "form-control", input_html: { min: "1", max: "999999999"}, placeholder: t("#{product}.quantities"), min: 1 %>
+              <%= f.input :discount, class: "form-control", input_html: { min: "0", max: "100"}, placeholder: t("#{product}.discount"), min: 1 %>
             </div>
           </div>
 

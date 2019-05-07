@@ -12,9 +12,9 @@ class Product < ApplicationRecord
   attr_accessor :quantity
 
   validates :title, :name, :image, :price, :status, :quantities, :region_id, :category_id, :provider_id, presence: true
-  validates :price, inclusion: {in: 1000..999999999}
+  validates :price, inclusion: {in: 1000..10000000}
   validates :discount, inclusion: {in: 0..100}, allow_blank: true
-  validates :quantities, inclusion: {in: 1..999999999}
+  validates :quantities, inclusion: {in: 1..1000000}
 
   scope :by_region_product, -> id {where region_id: id}
   scope :by_product_id, -> id {where id: id}

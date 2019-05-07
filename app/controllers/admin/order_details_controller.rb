@@ -4,7 +4,6 @@ module Admin
 
     def index
       @order_details = @order.OrderDetails.all
-      @order_user = User.find_by id: @order.user_id
       sum = 0
       @order_details.each{|item| sum += item.quantity unless item.status == "cancel"}
       @total_quantity = sum

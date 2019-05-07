@@ -107,9 +107,9 @@ vi:
     order_details:
       index:
         order_detail: "Chi tiết hóa đơn"
-        full_name: "Họ tên"
+        receiver_name: "Họ tên người nhận"
         phone: "Số điện thoại"
-        address: "Địa chỉ"
+        receiver_address: "Địa chỉ người nhận"
         total_quantity: "Tổng số lượng"
         total_amount: "Tổng tiền"
         code: "Mã sp"

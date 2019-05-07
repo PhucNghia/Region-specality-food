@@ -27,6 +27,28 @@
   color: white;
 }
 
+.capsule-product {
+  font-size: 12px;
+  padding: 1px 12px;
+  display: inline-block;
+  border-radius: 14px;
+  background-color: #eff0f5;
+  max-width: 200px;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.capsule-stocking {
+  background: #088A68;
+  color: white;
+}
+
+.capsule-out_of_stock {
+  background: #424242;
+  color: white;
+}
+
 .product-id a, .product-id a:hover {
   color: blue;
 }

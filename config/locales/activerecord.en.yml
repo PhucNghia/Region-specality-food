@@ -34,6 +34,10 @@ en:
           indelivery: "Indelivery"
           success: "Delivered"
           cancel: "Canceled"
+      receiver_name: "Receiver name"
+      email: "Email"
+      phone: "Phone"
+      receiver_address: "Receiver address"
     errors:
       models:
         user:
@@ -60,14 +64,14 @@ en:
               blank: "Not blank"
             price:
               blank: "Not blank"
-              inclusion: "Inclusion 1.000 to 999.999.999"
+              inclusion: "Inclusion 1.000 to 10.000.000"
             status:
               blank: "Not blank"
             discount:
               inclusion: "Inclusion 0 to 100"
             quantities:
               blank: "Not blank"
-              inclusion: "Inclusion 1 to 999.999.999"
+              inclusion: "Inclusion 1 to 1.000.000"
             region_id:
               blank: "Not blank"
             category_id:
@@ -78,3 +82,24 @@ en:
           attributes:
             content:
               blank: "Not blank"
+        order:
+          attributes:
+            receiver_name:
+              blank: "Not blank"
+              too_short: "Name to short"
+              too_long: "Name to long"
+            email:
+              blank: "Not blank"
+              too_short: "Email to short"
+              too_long: "Email to long"
+              invalid: "Email invalid"
+            phone:
+              blank: "Not blank"
+              too_short: "Phone to short"
+              too_long: "Phone to long"
+              invalid: "Phone invalid"
+            receiver_address:
+              blank: "Not blank"
+              too_short: "Address to short"
+              too_long: "Address to long"
+
