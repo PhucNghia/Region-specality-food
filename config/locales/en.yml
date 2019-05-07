@@ -21,6 +21,9 @@ en:
       about_x_years:
         one: "1 year"
         other: "%{count} years"
+  will_paginate:
+    next_label: "Next"
+    previous_label: "Previous"
   layouts:
     header:
       product: "PRODUCT"

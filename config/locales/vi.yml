@@ -13,6 +13,9 @@ vi:
       x_days: "%{count} ngày"
       about_x_hours: "%{count} giờ"
       about_x_years: "%{count} năm"
+  will_paginate:
+    next_label: "Sau"
+    previous_label: "Trước"
   layouts:
     header:
       product: "SẢN PHẨM"

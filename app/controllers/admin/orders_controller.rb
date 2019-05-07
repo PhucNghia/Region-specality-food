@@ -3,7 +3,7 @@ module Admin
     before_action :load_order, only: [:update]
 
     def index
-      @orders = Order.all
+      @orders = Order.order('id asc').page(params[:page]).per_page 8
     end
 
     def update

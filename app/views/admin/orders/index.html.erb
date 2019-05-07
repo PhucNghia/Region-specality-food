@@ -20,8 +20,7 @@
     </tbody>
   </table>
   <div class="modal fade" id="order-details" role="dialog"></div>
-  <div class="col-md-12 pagination-user text-center">
-    <!-- @Html.PagedListPager(Model, order:
-        show: "Chi tiết"page => Url.Action("Index", new { page })) -->
+  <div class="col-md-12 pagination-product text-center">
+    <%= will_paginate @orders %>
   </div>
 </div>
