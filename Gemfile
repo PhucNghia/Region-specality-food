@@ -37,7 +37,6 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "mysql2", ">= 0.3.18", "< 0.5"
   gem "rspec-rails", "~> 3.6"
-  gem "capybara", "~> 2.13"
 end
 
 group :development do
