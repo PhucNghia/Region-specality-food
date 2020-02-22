@@ -41,3 +41,11 @@ development:
 test:
   <<: *default
   database: rsf_test
+
+staging:
+  <<: *default
+  database: rsf_staging
+
+production:
+  <<: *default
+  database: rsf_production
