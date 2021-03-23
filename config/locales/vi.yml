@@ -29,10 +29,10 @@ vi:
       cart: "Giỏ hàng"
     footer:
       description: "Đây là trang web giới thiệu về những đặc sản của xứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
-      create_date: "Tháng 2 năm 2019"
+      create_date: "Tháng 3 năm 2021"
       contact: "LIÊN HỆ"
       address: "Địa chỉ"
-      address_detail: "CNTT1 - K10, ĐH Công Nghiệp Hà Nội"
+      address_detail: "HTTT2 - K12, ĐH Công Nghiệp Hà Nội"
       phone: "Điện thoại"
       students_make: "SINH VIÊN THỰC HIỆN"
   booking_carts:

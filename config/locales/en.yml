@@ -37,10 +37,10 @@ en:
       cart: "Cart"
     footer:
       description: "This is the website introducing Vietnamese specialties, stretching from the North - the beginning of the country until the beloved South."
-      create_date: "February, 2019"
+      create_date: "March, 2021"
       contact: "CONTACT"
       address: "ADDRESS"
-      address_detail: "CNTT1 - K10, Hanoi University of Industry"
+      address_detail: "HTTT2 - K12, Hanoi University of Industry"
       phone: "Phone"
       students_make: "STUDENTS MAKE"
   booking_carts:

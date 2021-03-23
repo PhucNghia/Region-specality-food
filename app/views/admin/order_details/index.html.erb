@@ -1,0 +1,58 @@
+<div class="invoice-box">
+  <div class="title">Chi tiết hóa đơn</div>
+  <table cellpadding="0" cellspacing="0">
+    <tr class="">
+      <td colspan="5">
+        <table cellpadding="0" cellspacing="0" style="color: darkcyan;">
+          <tr>
+            <td>
+              <br>
+              Họ tên người nhận: <%= @order.receiver_name %> <br>
+              Số điện thoại: <%= @order.phone %> <br>
+              Email: <%= @order.email %> <br>
+              Địa chỉ người nhận: <%= @order.receiver_address %>
+            </td>
+            <td class="right">
+              Tổng số lượng: <%= @total_quantity %><br><br>
+              Tổng tiền: <%= format_money @total_sale_price %>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr class="heading">
+      <td class="left">Mã sản phẩm</td>
+      <td class="left">Tên sản phẩm</td>
+      <td class="left">Số lượng</td>
+      <td class="left">Đơn giá</td>
+      <td class="left">Thành tiền</td>
+    </tr>
+    <br>
+    <tbody>
+      <% @order_details.each do |order_detail| %>
+        <tr>
+          <td class="order-id"><a href="javascript:;">#<%= order_detail.product.id %></a></td>
+          <td class="text-left"><%= order_detail.product.name %></td>
+          <td class=""><%= order_detail.quantity %></td>
+          <td class=""><%= format_money order_detail.product.price %></td>
+          <td class=""><%= format_money order_detail.sale_price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<!-- <div class="invoice-box">
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2" class="center">
+        <span>Người gửi</span>
+      </td>
+      <td colspan="2" class="right">
+        <span>Người nhận</span>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+  <br><br><br>
+</div> -->

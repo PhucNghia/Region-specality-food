@@ -14,6 +14,7 @@ vi:
       user:
         unauthenticated: "Bạn cần phải đăng nhập hoặc đăng ký trước"
         invalid: "Bạn đã nhập sai tên đăng nhập hoặc mật khẩu"
+        not_found_in_database: "username hoặc email ko hợp lệ"
     registrations:
       new:
         sign_up: "Đăng ký"

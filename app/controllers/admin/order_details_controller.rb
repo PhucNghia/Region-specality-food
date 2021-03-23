@@ -10,6 +10,21 @@ module Admin
       sum = 0
       @order_details.each{|item| sum += item.sale_price unless item.status == "cancel"}
       @total_sale_price = sum
+      
+      respond_to do |format|
+        format.html
+        format.js
+        format.pdf do
+          render pdf: "invoice",
+          page_size: 'A4',
+          template: "admin/order_details/index.html.erb",
+          layout: "admin/layouts/pdf.html",
+          orientation: "Landscape",
+          lowquality: true,
+          zoom: 1,
+          dpi: 75
+        end
+      end
     end
 
     private

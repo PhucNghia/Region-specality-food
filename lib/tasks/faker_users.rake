@@ -3,13 +3,13 @@ namespace :db do
     puts "Create User"
     User.create!(
       email: "admin@gmail.com",
-      name: "Ngọc Nghĩa", #FFaker::NameVN.name,
-      password: "ngocnghia97",
+      name: "Đỗ Thị Nhàn", #FFaker::NameVN.name,
+      password: "nhanxinh",
       username: "admin",
-      birthday: "23/08/1997",
-      gender: 1,
+      birthday: "04/12/1999",
+      gender: 0,
       phone: "0382305339",
-      address: "Tuyên Quang",
+      address: "Tây Ninh",
       role_id: 1
     )
 
@@ -19,7 +19,7 @@ namespace :db do
       User.create!(
         email: FFaker::Internet.email,
         name: FFaker::NameVN.name,
-        password: "ngocnghia97",
+        password: "123456",
         username: "username-#{n+1}",
         birthday: "23/08/1997",
         gender: gender,

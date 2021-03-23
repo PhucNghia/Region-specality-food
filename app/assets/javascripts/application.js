@@ -25,6 +25,7 @@
 //= require order_detail.js
 //= require orders.js
 //= require statisticals.js
+//= require products.js
 
 // require template/jquery.min.js
 // require template/bootstrap.min.js

@@ -2,7 +2,15 @@ class ProductsController < ApplicationController
   before_action :load_products, only: %i(show)
 
   def index
-    @products = Product.order('region_id asc').page(params[:page]).per_page 4
+    query = params[:query]
+    if !query.nil? && query.strip! != ""
+      @products = Product.where("name LIKE :name", name: "#{query}%").order('region_id asc').page(params[:page]).per_page 4
+      respond_to do |format|
+        format.js
+      end
+    else
+      @products = Product.order('region_id asc').page(params[:page]).per_page 4
+    end
     most_bought_product
   end
 
