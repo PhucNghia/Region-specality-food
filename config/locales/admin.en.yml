@@ -15,6 +15,7 @@ en:
         user_management: "User management"
         product_management: "Product management"
         order_management: "Order management"
+        report: "Report"
         order_finish: "Order success"
         order_cancel: "Order cancel"
       footer:

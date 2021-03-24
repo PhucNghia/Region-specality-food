@@ -1,6 +1,6 @@
 module Admin
   class OrderDetailsController < AdminBaseController
-    before_action :load_order
+    before_action :load_order, only: [:index]
 
     def index
       @order_details = @order.OrderDetails.all
@@ -25,6 +25,29 @@ module Admin
           dpi: 75
         end
       end
+    end
+
+    def report
+      orders = Order.all
+      @order_details = []
+      orders.each do |order|
+        order.OrderDetails.all.each do |o|
+          if o.status == "success"
+            o.created_at = order.order_date
+            @order_details.push(o)
+          end
+        end
+      end
+
+      total_quantity = 0
+      total_sale_price = 0
+
+      @order_details.each do |item| 
+        total_quantity += item.quantity
+        total_sale_price += item.sale_price
+      end
+      @total_quantity = total_quantity
+      @total_sale_price = total_sale_price
     end
 
     private
