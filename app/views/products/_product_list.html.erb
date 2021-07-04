@@ -1,0 +1,22 @@
+<div class="noo-catalog">
+  <%# <p class="commerce-result-count">Showing 1&ndash;9 of 18 results</p> %>
+  <!-- <form class="commerce-ordering pull-right">
+    <select name="orderby" class="orderby">
+      <option value="" selected='selected'><%= t ".order" %></option>
+      <option value=""><%= t ".order_by_price" %></option>
+      <option value=""><%= t ".order_by_name" %></option>
+    </select>
+  </form> -->
+  <%# <div class="product-style-control pull-left">
+      <span class="noo-list active"><i class="fa fa-th-list"></i></span>
+      <span class="noo-grid"><a href="#"><i class="fa fa-th-large"></i></a></span>
+  </div> %>
+</div>
+<div class="products row product-list">
+  <% @products.each do |product| %>
+    <%= render product %>
+  <% end %>
+</div>
+<div class="col-md-12 pagination-product text-center">
+  <%= will_paginate @orders %>
+</div>

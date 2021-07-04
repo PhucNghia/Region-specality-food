@@ -102,7 +102,7 @@
             <div class="related products">
               <h2><%= t ".product_relate" %></h2>
               <div class="products row product-grid">
-                <% region_porduct(3).each do |product| %>
+                <% region_porduct(@product.region.id).limit(3).each do |product| %>
                   <div class="masonry-item noo-product-column col-md-4 col-sm-6 product">
                     <div class="noo-product-inner">
                       <div class="noo-product-thumbnail">
@@ -138,7 +138,7 @@
             <div class="widget commerce widget_products">
               <h3 class="widget-title"><%= t ".most_bought" %></h3>
               <ul class="product_list_widget">
-                <% region_porduct(2).each do |product| %>
+                <% @most_bought_products.each do |product| %>
                   <li>
                     <%= link_to product_path(product.id) do %>
                       <%= image_tag product.image %>

@@ -2,7 +2,16 @@ class ProductsController < ApplicationController
   before_action :load_products, only: %i(show)
 
   def index
-    @products = Product.all
+    query = params[:query]
+    if !query.nil? && query.strip! != ""
+      @products = Product.where("name LIKE :name", name: "#{query}%").order('region_id asc').page(params[:page]).per_page 4
+      respond_to do |format|
+        format.js
+      end
+    else
+      @products = Product.order('region_id asc').page(params[:page]).per_page 4
+    end
+    most_bought_product
   end
 
   def show
@@ -14,6 +23,8 @@ class ProductsController < ApplicationController
 
     gon.comment_ids = @product.comments.pluck(:id)
     gon.mention_usernames = @mention_usernames
+
+    most_bought_product
   end
 
   private
@@ -23,5 +34,11 @@ class ProductsController < ApplicationController
     return if @product
     flash[:danger] = t ".not_found"
     redirect_to root_path
+  end
+
+  def most_bought_product
+    most_bought = OrderDetail.limit(6).pluck(:product_id)
+    most_bought = most_bought + Product.limit(6 - most_bought.length).pluck(:id) if most_bought.length < 6
+    @most_bought_products = Product.where(id: most_bought)
   end
 end

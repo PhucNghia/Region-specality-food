@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:index, :update] do
       resources :order_details, only: [:index]
     end
+    get "report", to: "order_details#report"
+    resources :order_details, only: [:index, :report]
   end
 end

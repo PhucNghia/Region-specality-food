@@ -4,7 +4,7 @@ module Admin
     skip_before_action :verify_authenticity_token, only: %i(create update)
 
     def index
-      @products = Product.all
+      @products = Product.order('region_id asc').page(params[:page]).per_page 8
     end
 
     def show; end

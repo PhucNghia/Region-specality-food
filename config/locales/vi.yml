@@ -13,6 +13,9 @@ vi:
       x_days: "%{count} ngày"
       about_x_hours: "%{count} giờ"
       about_x_years: "%{count} năm"
+  will_paginate:
+    next_label: "Sau"
+    previous_label: "Trước"
   layouts:
     header:
       product: "SẢN PHẨM"
@@ -26,10 +29,10 @@ vi:
       cart: "Giỏ hàng"
     footer:
       description: "Đây là trang web giới thiệu về những đặc sản của xứ Việt, trải dài từ miền Bắc - điểm đầu của tổ quốc cho tới tận miền Nam yêu dấu"
-      create_date: "Tháng 2 năm 2019"
+      create_date: "Tháng 3 năm 2021"
       contact: "LIÊN HỆ"
       address: "Địa chỉ"
-      address_detail: "CNTT1 - K10, ĐH Công Nghiệp Hà Nội"
+      address_detail: "HTTT2 - K12, ĐH Công Nghiệp Hà Nội"
       phone: "Điện thoại"
       students_make: "SINH VIÊN THỰC HIỆN"
   booking_carts:
